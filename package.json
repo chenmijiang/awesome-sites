@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "commit":"cz-customizable"
+  },
+  "config":{
+    "commitizen":{
+      "path":"cz-customizable"
+    }
   },
   "dependencies": {
     "@types/node": "18.15.3",
@@ -17,6 +23,15 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "styled-components": "^5.3.9",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "@fontsource/fira-mono": "^4.5.10",
+    "@types/styled-components": "^5.1.26",
+    "autoprefixer": "^10.4.14",
+    "cz-customizable": "^7.0.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }

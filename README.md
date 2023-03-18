@@ -1,38 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 这是什么
 
-## Getting Started
+收录前端各类技术站点。
+包括但不限于前端技术站点、技术周刊、**高质量**个人博客、前端公众号、技术规范、开源项目站点等。
+仅限中文、英文，英文最好。
 
-First, run the development server:
+## why
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+可能你觉得你有Google/Github就够了，但此仓库的存在主要为了起到下面几个作用：
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. 解放自己的浏览器书签页，清爽一下。
+2. 尤其对于国外的个人博客，经常会忘记他们叫什么，想搜索都不知道搜什么。
+3. 想技术提升的时候，有个统一的地方，找到这个仓库就可以找到大部分**新鲜的**技术资讯。
+4. 最主要的还是收录英文站点，理由同2。
+5. 比如你是一个前端博主，或者你要在团队内技术分享，当你灵感枯竭的时候来这些站点翻一翻。有很大帮助。
+6. 提供自定义网站功能，相当于书签管理，基于localstorage实现。
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 项目源地址
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[awesome-fe-sites](https://github.com/cunzaizhuyi/awesome-fe-sites)
