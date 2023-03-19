@@ -1,6 +1,5 @@
-import styled from 'styled-components'
-
 import { allSites } from '@/configs/sites'
+
 import Card from './Card'
 import CategoryTitle from './CategoryTitle'
 
@@ -10,10 +9,10 @@ const List = () => {
       {allSites.map((list, index) => {
         return (
           <div
-            className="site-block my-30px"
+            className="site-block my-[30px]"
             key={index}>
             <CategoryTitle category={list} />
-            <ItemWrapper>
+            <div className="grid grid-cols-list gap-3">
               {list.sites.map((site, i) => {
                 return (
                   <Card
@@ -22,18 +21,12 @@ const List = () => {
                   />
                 )
               })}
-            </ItemWrapper>
+            </div>
           </div>
         )
       })}
     </section>
   )
 }
-
-const ItemWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
-`
 
 export default List

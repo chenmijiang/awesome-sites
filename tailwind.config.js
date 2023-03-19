@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'list': 'repeat(auto-fill, minmax(300px, 1fr))'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }

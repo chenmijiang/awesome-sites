@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
@@ -8,46 +9,40 @@ const Header = () => {
   const router = useRouter()
   const pathname = router.pathname
   return (
-    <HeaderContainer className="pt-10px">
-      {/* site-title */}
-      <section className="relative">
-        <div className="text-center">
-          <div className="mb-10px text-30px">
-            <div className="i-mdi-forest text-green"></div>
-            <span className="px-5px relative top-2px">前端森林</span>
-            <div className="i-mdi-forest text-green"></div>
-          </div>
-          <div className="slogan">前端酷站 尽收眼底</div>
-        </div>
-      </section>
-
+    <HeaderContainer>
       <div className="right absolute right-20px top-0 flex">
         <nav>
           <svg
-            viewBox="0 0 2 3"
-            aria-hidden="true">
-            <path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
+            className="w-2em h-3em block"
+            viewBox="0 0 2 3">
+            <path
+              d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z"
+              fill=""
+            />
           </svg>
           <ul>
-            <li className={pathname === '/' ? 'page' : undefined}>
+            <li aria-current={pathname === '/' ? 'page' : undefined}>
               <Link href="/">主页</Link>
             </li>
-            <li className={pathname === '/' ? 'page' : undefined}>
-              <a href="/about">关于</a>
+            <li aria-current={pathname === '/' ? 'page' : undefined}>
+              <Link href="/about">关于</Link>
             </li>
           </ul>
           <svg
+            className="w-2em h-3em block"
             viewBox="0 0 2 3"
             aria-hidden="true">
             <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
           </svg>
         </nav>
 
-        <div className="corner">
+        <div className="corner w-[3em] h-[3em]">
           <a
+            className="w-full h-full flex justify-center items-center"
             href="https://github.com/cunzaizhuyi/awesome-fe-sites"
             target="_blank">
-            <img
+            <Image
+              className="w-[2em] h-[2em] object-contain"
               src={github}
               alt="GitHub"
             />
@@ -59,39 +54,13 @@ const Header = () => {
 }
 
 const HeaderContainer = styled.div`
-  .corner {
-    width: 3em;
-    height: 3em;
-  }
-
-  .corner a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .corner img {
-    width: 2em;
-    height: 2em;
-    object-fit: contain;
-  }
-
   nav {
     display: flex;
     justify-content: center;
     --background: rgba(255, 255, 255, 0.7);
-  }
-
-  svg {
-    width: 2em;
-    height: 3em;
-    display: block;
-  }
-
-  path {
-    fill: var(--background);
+    path {
+      fill: var(--background);
+    }
   }
 
   ul {

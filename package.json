@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "commit":"cz-customizable"
+    "commit": "cz-customizable"
   },
-  "config":{
-    "commitizen":{
-      "path":"cz-customizable"
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
     }
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "^0.31.3",
     "styled-components": "^5.3.9",
     "typescript": "5.0.2"
   },
