@@ -13,6 +13,7 @@ const HotSites = () => {
             href={site.link}
             target="_blank"
             rel="noreferer"
+            id="热门站点"
             className="duration-300 transition flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 centerLayout py-2 px-5 bg-white text-black hover:shadow-[2px_2px_6px_gray] no-underline">
             {site.logo && (
               <Image
