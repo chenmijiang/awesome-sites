@@ -4,6 +4,7 @@ import HotSites from '@/components/HotSites'
 import List from '@/components/home/List'
 import Sidebar from '@/components/home/Sidebar'
 import SearchContent from '@/components/home/SearchContent'
+import axios from 'axios'
 
 export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
@@ -30,8 +31,11 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
 }
 
 export async function getServerSideProps() {
-  // 获取bing图片
-  const res = await fetch('http:/localhost:3000/api/bing')
+  // 获取环境
+  const baseUrl =
+    process.env.NODE_ENV === 'production' ? process.env.PROD_BASEURL : process.env.DEV_BASEURL
+  // axios获取bing图片
+  const res = await fetch(baseUrl + '/api/bing')
   const { url } = await res.json()
   return {
     props: {
