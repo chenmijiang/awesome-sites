@@ -4,14 +4,14 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
-  rewrites: async () => {
-    return [
-      {
-        source: '/',
-        destination: '/home'
-      }
-    ]
-  },
+  // rewrites: async () => {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/home'
+  //     }
+  //   ]
+  // },
   images: {
     remotePatterns: [
       {

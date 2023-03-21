@@ -1,9 +1,9 @@
 import { InferGetServerSidePropsType } from 'next/types'
 import HotSites from '@/components/HotSites'
 // import CustomSites from '@/pages/home/CustomSites'
-import List from '@/pages/home/List'
-import Sidebar from '@/pages/home/Sidebar'
-import SearchContent from '@/pages/home/SearchContent'
+import List from '@/components/home/List'
+import Sidebar from '@/components/home/Sidebar'
+import SearchContent from '@/components/home/SearchContent'
 
 export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
