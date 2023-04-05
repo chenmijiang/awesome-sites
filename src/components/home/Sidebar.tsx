@@ -1,12 +1,13 @@
 import Link from 'next/link'
 
 import { allSites } from '@/configs/sites'
+import { ImNewspaper } from 'react-icons/im'
 
 const Sidebar = () => {
   return (
     <div
       id="sidebar"
-      className="md:w-[100px] w-0 fixed top-0 left-0 h-full overflow-auto transition-[width]">
+      className="md:w-[100px] w-0 fixed top-0 left-0 h-full overflow-auto">
       <div className="modal-dialog h-full sidebar-nav-inner flex flex-col">
         {/* sidebar-logo */}
         <div className="sidebar-logo bg-sky-500/10">
@@ -42,8 +43,9 @@ const Sidebar = () => {
                 <li className="sidebar-item leading-10 ml-3">
                   <a
                     href="#热门站点"
-                    className="smooth">
-                    <span>热门站点</span>
+                    className="smooth flex items-center gap-1">
+                    <ImNewspaper size={32} />
+                    <span className="item-name lg:block hidden">热门站点</span>
                   </a>
                 </li>
                 {allSites.map((list, index) => {
@@ -53,8 +55,9 @@ const Sidebar = () => {
                       key={index}>
                       <a
                         href={`#${list.type}`}
-                        className="smooth">
-                        <span>{list.type}</span>
+                        className="smooth flex items-center gap-1">
+                        <ImNewspaper size={32} />
+                        <span className="item-name lg:block hidden">{list.type}</span>
                       </a>
                     </li>
                   )

@@ -6,16 +6,18 @@ type Props = {
 
 const SearchContent = ({ url }: Props) => {
   return (
-    // overflow: hidden;
-    // background-position: center;
-    // border-radius: 10px;
-    // margin: 30px 0;
-    <div className="h-[300px] overflow-hidden bg-center bg-cover rounded-lg my-8">
+    <div className="h-[300px] overflow-hidden bg-center bg-cover rounded-lg my-8 mt-16">
       <Image
         src={url}
         alt={''}
-        width={960}
-        height={540}
+        width={1920}
+        height={300}
+        onError={(e: any) => {
+          // 加载 url 失败，设置鱼骨图
+          e.target.classList.add('bg-gray-300')
+          e.target.width = 1920
+          e.target.height = 400
+        }}
       />
       {/* 背景图片和搜索框 */}
       <div className="header">

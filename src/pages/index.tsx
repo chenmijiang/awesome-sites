@@ -76,6 +76,10 @@ const HomeWrapper = styled.div.attrs({
       .main-head {
         padding-left: 100px;
       }
+
+      .item-name {
+        display: none;
+      }
     }
   }
 `
