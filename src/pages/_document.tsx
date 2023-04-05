@@ -6,24 +6,12 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta
-          name="description"
-          content="Awesome Sites"
-        />
-        <meta
-          name="author"
-          content="Awesome Sites"
-        />
-        <meta
-          name="keywords"
-          content="Awesome Sites"
+          http-equiv="Content-Type"
+          content="text/html; charset=UTF-8"
         />
         <meta
           name="theme-color"
-          content="#000000"
-        />
-        <link
-          rel="icon"
-          href="/favicon.ico"
+          content="#2C2E2F"
         />
       </Head>
       <body>

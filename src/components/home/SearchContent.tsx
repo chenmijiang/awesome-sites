@@ -14,8 +14,8 @@ const SearchContent = ({ url }: Props) => {
       <Image
         src={url}
         alt={''}
-        width={1920}
-        height={1080}
+        width={960}
+        height={540}
       />
       {/* 背景图片和搜索框 */}
       <div className="header">

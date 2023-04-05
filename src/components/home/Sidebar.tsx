@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div
       id="sidebar"
-      className="md:w-[220px] fixed top-0 left-0 h-full overflow-auto w-[100px]">
+      className="md:w-[100px] w-0 fixed top-0 left-0 h-full overflow-auto transition-[width]">
       <div className="modal-dialog h-full sidebar-nav-inner flex flex-col">
         {/* sidebar-logo */}
         <div className="sidebar-logo bg-sky-500/10">

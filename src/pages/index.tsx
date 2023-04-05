@@ -1,45 +1,91 @@
-import { InferGetServerSidePropsType } from 'next/types'
 import HotSites from '@/components/HotSites'
 // import CustomSites from '@/pages/home/CustomSites'
-import List from '@/components/home/List'
 import Sidebar from '@/components/home/Sidebar'
 import SearchContent from '@/components/home/SearchContent'
-import axios from 'axios'
+import Layout from '@/components/ui/layout'
+import Header from '@/components/home/Header'
+// import Bulletin from '@/components/home/Bulletin'
+import SitesList from '@/components/home/SitesList'
+import Footer from '@/components/home/Footer'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { fetchBingImg } from '@/util/fetch-bing-image'
+import { useState } from 'react'
+import styled from 'styled-components'
 
-export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
+// 网页结构（flex布局）侧边栏（左侧），主体（右侧），侧边栏固定220px。主体有显示和隐藏侧边栏的按钮。改变窗口大小，小于 768px，侧边栏隐藏，主体宽度 100%
+
+export default function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
+  const [sideBarShow, setSideBarShow] = useState(true)
+  const isToggleShow = () => {
+    setSideBarShow(!sideBarShow)
+  }
   return (
-    <div className="home flex min-h-screen">
-      {/* 侧边栏 */}
-      <Sidebar />
-      <main className="px-2 md:ml-[220px] ml-[100px]">
-        {/* 导航 */}
-        {/* <Header/> */}
-        {/* 搜索 */}
-        <SearchContent url={props.url} />
-        {/* 热门站点 */}
-        <HotSites></HotSites>
-        {/* 手动设置 */}
-        {/* <CustomSites></CustomSites> */}
-        {/* 站点列表 */}
-        <List></List>
-        <footer className="h-10 text-center">
-          <p className="leading-10 font-bold text-xl text-center py-3">前端森林</p>
-        </footer>
-      </main>
-    </div>
+    <HomeWrapper>
+      <div className={`flex flex-row-reverse w-full h-full${sideBarShow ? '' : ' mini-sidebar'}`}>
+        {/* 侧边栏 */}
+        <Sidebar />
+        <Layout>
+          {/* 导航 */}
+          <Header isToggleShow={isToggleShow} />
+          {/* 消息通知 */}
+          {/* <Bulletin /> */}
+          {/* 搜索 */}
+          <SearchContent
+            url={props.bingImg}
+            // url={''}
+          />
+          {/* 手动设置 */}
+          {/* <CustomSites></CustomSites> */}
+          {/* 热门站点 */}
+          <HotSites></HotSites>
+          {/* 站点列表 */}
+          <SitesList />
+          {/* 脚部 */}
+          <Footer />
+        </Layout>
+      </div>
+    </HomeWrapper>
   )
 }
 
-export async function getServerSideProps() {
-  // 获取环境
-  const baseUrl =
-    process.env.NODE_ENV === 'production' ? process.env.PROD_BASEURL : process.env.DEV_BASEURL
-  // axios获取bing图片
-  const res = await fetch(baseUrl + '/api/bing')
-  const { url } = await res.json()
+const HomeWrapper = styled.div.attrs({
+  className: 'min-h-screen'
+})`
+  @media (min-width: 1024px) {
+    #sidebar {
+      width: 220px;
+    }
+
+    .main {
+      width: calc(100% - 220px);
+    }
+
+    .main-head {
+      padding-left: 220px;
+    }
+
+    .mini-sidebar {
+      #sidebar {
+        width: 100px;
+      }
+
+      .main {
+        width: calc(100% - 100px);
+      }
+
+      .main-head {
+        padding-left: 100px;
+      }
+    }
+  }
+`
+
+export const getStaticProps: GetStaticProps<{ bingImg: string }> = async () => {
+  // 获取 bing 图片
+  const bingImg = await fetchBingImg()
   return {
     props: {
-      url
+      bingImg: bingImg
     }
   }
 }

@@ -3,7 +3,7 @@ import { allSites } from '@/configs/sites'
 import Card from './Card'
 import CategoryTitle from './CategoryTitle'
 
-const List = () => {
+const SitesList = () => {
   return (
     <section className="all-sites">
       {allSites.map((list, index) => {
@@ -29,4 +29,4 @@ const List = () => {
   )
 }
 
-export default List
+export default SitesList
