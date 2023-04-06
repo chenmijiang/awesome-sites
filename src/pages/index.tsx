@@ -66,18 +66,19 @@ const HomeWrapper = styled.div.attrs({
 
     .mini-sidebar {
       #sidebar {
-        width: 100px;
+        width: 60px;
       }
 
       .main {
-        width: calc(100% - 100px);
+        width: calc(100% - 60px);
       }
 
       .main-head {
-        padding-left: 100px;
+        padding-left: 60px;
       }
 
-      .item-name {
+      .item-name,
+      .logo-detail {
         display: none;
       }
     }

@@ -13,7 +13,7 @@ const Header = (props: Props) => {
   const pathname = router.pathname
 
   return (
-    <div className="main-head fixed w-full top-0 left-0 md:pl-[100px] pl-0 z-50">
+    <div className="main-head fixed w-full top-0 left-0 md:pl-[60px] pl-0 z-10">
       <div className="w-full h-[60px] bg-white">
         <div className="p-2 navbar flex items-center justify-between">
           <div className="container-fluid flex mr-3">

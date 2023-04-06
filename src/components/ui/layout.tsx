@@ -13,7 +13,7 @@ const Layout = (props: {
 }) => {
   return (
     <div
-      className="main px-2 md:ml-[100px] ml-0 relative">
+      className="main px-2 md:ml-[60px] ml-0 relative">
       {props.children}
     </div>
   )
