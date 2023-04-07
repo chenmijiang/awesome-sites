@@ -91,6 +91,7 @@ export const getStaticProps: GetStaticProps<{ bingImg: string }> = async () => {
   return {
     props: {
       bingImg: bingImg
-    }
+    },
+    revalidate: 60 * 60 * 1 // 1小时更新一次
   }
 }

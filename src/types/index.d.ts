@@ -15,3 +15,13 @@ type HotSite = {
   link: string
   logo?: any
 }
+
+export type searchEngines = {
+  engines: {
+    id: string
+    name: string
+    url: string
+    hint: string
+  }[]
+  currentEngine: number
+}

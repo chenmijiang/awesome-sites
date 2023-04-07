@@ -8,7 +8,7 @@ module.exports = {
       },
       transitionProperty: {
         with: 'width'
-      }
+      },
     }
   },
   plugins: []
