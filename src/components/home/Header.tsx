@@ -1,41 +1,46 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
-import { FaLaptop } from 'react-icons/fa'
-import { ImIndentIncrease, ImGithub } from 'react-icons/im'
-import styled from 'styled-components'
+import { FaLaptop, FaAirbnb, FaAlignLeft } from 'react-icons/fa'
+import { ImGithub } from 'react-icons/im'
 
 type Props = {
   isToggleShow: () => void
 }
 
 const Header = (props: Props) => {
-  const router = useRouter()
-  const pathname = router.pathname
-
   return (
-    <HeaderContainer>
-      <div className="head-bg w-full h-[60px] bg-white">
+    <div className="main-head fixed w-full top-0 left-0 md:pl-[60px] pl-0 z-10">
+      <div className="head-bg w-full h-[60px] backdrop-blur transition-colors duration-500 bg-white/70 supports-backdrop-blur:bg-white/60">
         <div className="py-2 px-4 navbar flex items-center justify-between">
           <div className="container-fluid flex">
             <div className="py-2">
               <span
                 className="cursor-pointer"
                 onClick={props.isToggleShow}>
-                <ImIndentIncrease size={28} />
+                <FaAlignLeft size={26} />
               </span>
             </div>
             <div className="collapse navbar-collapse order-2 order-md-1" />
             <div className="header-mini-btn"></div>
-            <ul className="navbar-nav navbar-top site-menu ml-8">
+            <ul className="navbar-nav navbar-top site-menu ml-8 flex">
               <li
                 id="menu-item-28"
-                className="h-full flex justify-center items-center">
+                className="h-full flex justify-center items-center mr-4">
                 <Link
                   href="/"
-                  className="flex items-center hover:no-underline hover:text-sky-200 transition-colors">
-                  <FaLaptop size={28} />
-                  <span className="ml-2 text-lg">首页</span>
+                  className="flex items-center hover:no-underline transition-colors">
+                  <FaLaptop size={26} />
+                  <span className="ml-1 text-lg">首页</span>
+                </Link>
+              </li>
+              <li
+                id="menu-item-28"
+                className="h-full flex justify-center items-center mr-4">
+                <Link
+                  href="/ai"
+                  className="flex items-center hover:no-underline transition-colors">
+                  <FaAirbnb size={26} />
+                  <span className="ml-1 text-lg">AI</span>
                 </Link>
               </li>
             </ul>
@@ -53,13 +58,8 @@ const Header = (props: Props) => {
           </ul>
         </div>
       </div>
-    </HeaderContainer>
+    </div>
   )
 }
-
-const HeaderContainer = styled.div.attrs({
-  className: 'main-head fixed w-full top-0 left-0 md:pl-[60px] pl-0 z-10'
-})`
-`
 
 export default Header
