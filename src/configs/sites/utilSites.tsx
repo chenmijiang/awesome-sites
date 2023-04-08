@@ -1,6 +1,14 @@
+import { Icon } from '@iconify-icon/react'
+
 export const cssUtilSites = {
   type: '工具-css',
-  icon: null,
+  icon: (
+    <Icon
+      icon="ion:logo-css3"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
     {
       name: 'Web安全色',
@@ -122,7 +130,13 @@ export const cssUtilSites = {
 
 export const jsUtilSites = {
   type: '工具-js',
-  icon: null,
+  icon: (
+    <Icon
+      icon="ri:javascript-fill"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
     {
       name: 'JavaScript可视化执行',
@@ -154,8 +168,19 @@ export const jsUtilSites = {
 
 export const picUtilsSites = {
   type: '工具-图片',
-  icon: null,
+  icon: (
+    <Icon
+      icon="ic:baseline-image"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
+    {
+      name: 'Icones',
+      link: 'https://icones.js.org/',
+      desc: '一个免费的图标资源库，提供了大量的图标和图形，可以用于网站设计、移动应用设计、UI设计等各种设计领域'
+    },
     {
       name: '雪碧图/精灵图生成器',
       link: 'https://www.toptal.com/developers/css/sprite-generator',
@@ -176,7 +201,13 @@ export const picUtilsSites = {
 
 export const regexpUtilsSites = {
   type: '工具-正则',
-  icon: null,
+  icon: (
+    <Icon
+      icon="bi:regex"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
     {
       name: '正则生成、图解',
@@ -188,7 +219,13 @@ export const regexpUtilsSites = {
 
 export const serviceUtilSites = {
   type: '工具-服务',
-  icon: null,
+  icon: (
+    <Icon
+      icon="solar:server-2-bold"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
     {
       name: 'Nginx配置生成',

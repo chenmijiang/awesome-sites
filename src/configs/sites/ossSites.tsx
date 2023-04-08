@@ -1,7 +1,11 @@
+import {Icon} from '@iconify-icon/react'
+
 // 热门开源项目的站点
 export const ossSites = {
   type: '开源项目站点',
-  icon: null,
+  icon: (
+    <Icon icon="fluent:communication-16-filled" width={26} height={26} />
+  ),
   sites: [
     {
       name: 'bestofjs',

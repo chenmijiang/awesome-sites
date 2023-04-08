@@ -1,6 +1,14 @@
+import { Icon } from '@iconify-icon/react'
+
 export const techSites = {
-  type: '技术站点',
-  icon: null,
+  type: '技术社区',
+  icon: (
+    <Icon
+      icon="icon-park-solid:communication"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
     {
       name: 'dev.to',

@@ -1,6 +1,14 @@
+import { Icon } from '@iconify-icon/react'
+
 export const spec = {
   type: '规范',
-  icon: null,
+  icon: (
+    <Icon
+      icon="bx:bxs-ruler"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
     {
       name: 'html规范',

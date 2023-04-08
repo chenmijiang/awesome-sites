@@ -1,7 +1,11 @@
+import { Icon } from "@iconify-icon/react"
+
 // 各类技术周刊
 export const weekly = {
   type: '技术周刊',
-  icon: null,
+  icon: (
+    <Icon icon="material-symbols:book" width={26} height={26} />
+  ),
   sites: [
     {
       name: 'node-weekly',

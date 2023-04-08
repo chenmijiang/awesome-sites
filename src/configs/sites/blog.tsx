@@ -1,6 +1,10 @@
+import { Icon } from '@iconify-icon/react'
+
 export const teamBlog = {
   type: '技术团队博客',
-  icon: null,
+  icon: (
+    <Icon icon="fluent:people-team-20-filled" width={26} height={26} />
+  ),
   sites: [
     {
       name: 'web.dev',
@@ -22,7 +26,13 @@ export const teamBlog = {
 
 export const blog = {
   type: '高质量个人博客',
-  icon: null,
+  icon: (
+    <Icon
+      icon="ic:baseline-account-box"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
     {
       name: 'stefanjudis',
