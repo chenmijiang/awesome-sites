@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
-import { FaLaptop, FaAirbnb, FaAlignLeft } from 'react-icons/fa'
-import { ImGithub } from 'react-icons/im'
+import { Icon } from '@iconify-icon/react'
 
 type Props = {
   isToggleShow: () => void
@@ -15,9 +14,9 @@ const Header = (props: Props) => {
           <div className="container-fluid flex">
             <div className="py-2">
               <span
-                className="cursor-pointer"
+                className="cursor-pointer h-full flex items-center"
                 onClick={props.isToggleShow}>
-                <FaAlignLeft size={20} />
+                <Icon icon="material-symbols:left-panel-close-rounded" width={28} height={28} />
               </span>
             </div>
             <div className="collapse navbar-collapse order-2 order-md-1" />
@@ -29,7 +28,11 @@ const Header = (props: Props) => {
                 <Link
                   href="/"
                   className="flex items-center hover:no-underline transition-colors">
-                  <FaLaptop size={24} />
+                  <Icon
+                    icon="mdi:laptop"
+                    width={24}
+                    height={24}
+                  />
                   <span className="ml-1 text-lg">首页</span>
                 </Link>
               </li>
@@ -39,7 +42,7 @@ const Header = (props: Props) => {
                 <Link
                   href="/ai"
                   className="flex items-center hover:no-underline transition-colors">
-                  <FaAirbnb size={26} />
+                  <Icon icon="logos:airbnb-icon" width={20} height={20} />
                   <span className="ml-1 text-lg">AI</span>
                 </Link>
               </li>
@@ -52,7 +55,11 @@ const Header = (props: Props) => {
                 className="w-full h-full flex justify-center items-center"
                 href="https://github.com/chenmijiang/awesome-sites"
                 target="_blank">
-                <ImGithub size={26} />
+                <Icon
+                  icon="logos:github-icon"
+                  width={26}
+                  height={26}
+                />
               </a>
             </li>
           </ul>

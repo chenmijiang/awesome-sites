@@ -1,10 +1,11 @@
 export const spec = {
   type: '规范',
+  icon: null,
   sites: [
     {
       name: 'html规范',
       link: 'https://html.spec.whatwg.org/',
-      desc: '',
+      desc: ''
     },
     {
       name: 'WinterCG',
@@ -12,4 +13,4 @@ export const spec = {
       desc: 'WinterCG工作组'
     }
   ]
-};
+}

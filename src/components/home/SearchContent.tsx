@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { IoSearch } from 'react-icons/io5'
+import { Icon } from '@iconify-icon/react'
 
 import { useEffect, useRef, useState } from 'react'
 
@@ -109,7 +109,7 @@ const SearchContent = ({ url }: Props) => {
           <div
             className="absolute top-0 right-3 h-full flex items-center cursor-pointer"
             onClick={searchEvent}>
-            <IoSearch size={26} />
+            <Icon icon="ph:magnifying-glass-bold" width={26} height={26} />
           </div>
         </div>
       </div>

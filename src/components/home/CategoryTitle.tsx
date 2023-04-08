@@ -1,3 +1,5 @@
+import { Icon } from "@iconify-icon/react"
+
 type Props = {
   category: {
     type: string
@@ -8,9 +10,10 @@ type Props = {
 const CategoryTitle = ({ category }: Props) => {
   return (
     <div
-      className="mb-[10px] text-lg font-bold"
+      className="mb-[10px] text-lg font-bold flex items-center"
       id={category.type}>
-      <span className="relative top-[3px]">{category.type}</span>
+      <Icon icon="material-symbols:label" width={26} height={26}/>
+      <span className="relative ml-1">{category.type}</span>
     </div>
   )
 }

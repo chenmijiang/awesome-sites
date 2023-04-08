@@ -1,12 +1,24 @@
 import Image from 'next/image'
 import styled from 'styled-components'
+import { Icon } from '@iconify-icon/react'
 
 import { hotSites } from '@/configs/hotSites'
 
 const HotSites = () => {
   return (
     <section>
-      <h2 className="mb-[10px] text-lg font-bold">热门站点</h2>
+      <div className="flex items-center mb-[10px] text-[#f74311]">
+        <Icon
+          icon="solar:fire-bold"
+          width={26}
+          height={26}
+        />
+        <h2
+          className="text-lg font-bold mt-1 ml-1"
+          id="热门站点">
+          热门站点
+        </h2>
+      </div>
       <div className="flex flex-wrap my-[20px] gap-4">
         {hotSites.map((site, index) => (
           <HotSiteLink
@@ -14,7 +26,6 @@ const HotSites = () => {
             href={site.link}
             target="_blank"
             rel="noreferer"
-            id="热门站点"
             className="flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 py-2 px-4 bg-white shadow-sm text-cus-normal hover:text-cus-activated hover:shadow-md hover:-translate-y-1 transition duration-300">
             {site.logo && (
               <Image

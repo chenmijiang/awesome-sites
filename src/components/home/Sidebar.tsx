@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Link as JumpLink } from 'react-scroll'
 
 import { allSites } from '@/configs/sites'
-import { ImNewspaper, ImFire, ImCompass, ImInfo } from 'react-icons/im'
+import { Icon } from '@iconify-icon/react'
 
 import SimpleBar from 'simplebar-react'
 import 'simplebar-react/dist/simplebar.min.css'
@@ -18,8 +18,12 @@ const Sidebar = () => {
           <div className="logo overflow-hidden flex justify-center items-center">
             <Link
               href="/"
-              className="flex items-center hover:no-underline h-[50px]">
-              <ImCompass size={20} />
+              className="flex items-center hover:no-underline h-[50px] text-[#52be82]">
+              <Icon
+                icon="ic:round-forest"
+                width={24}
+                height={24}
+              />
               <h1 className="logo-detail lg:block hidden text-xl leading-[50px] ml-2 font-bold">
                 前端森林
               </h1>
@@ -37,17 +41,24 @@ const Sidebar = () => {
                     activeClass="active"
                     spy={true}
                     smooth={true}
-                    offset={-120}
+                    offset={-500}
                     duration={500}
                     className="flex items-center hover:no-underline h-[30px] cursor-pointer">
-                    <ImFire size={26} />
-                    <span className="item-name lg:block hidden ml-2 text-ellipsis whitespace-nowrap overflow-hidden">热门站点</span>
+                    <Icon
+                      icon="solar:fire-bold"
+                      width={26}
+                      height={26}
+                    />
+                    <span className="item-name lg:block hidden ml-2 text-cus-unactivated text-ellipsis whitespace-nowrap overflow-hidden">
+                      热门站点
+                    </span>
                   </JumpLink>
                 </li>
                 {allSites.map((list, index) => {
                   return (
                     <li
                       className="sidebar-item leading-10 ml-3 my-2"
+                      title={list.type}
                       key={index}>
                       <JumpLink
                         activeClass="active"
@@ -57,8 +68,16 @@ const Sidebar = () => {
                         duration={500}
                         to={list.type}
                         className="flex items-center hover:no-underline h-[30px] cursor-pointer">
-                        <ImNewspaper size={26} />
-                        <span className="item-name lg:block hidden ml-2 w-[140px] whitespace-nowrap text-ellipsis overflow-hidden">
+                        {list.icon !== null ? (
+                          list.icon
+                        ) : (
+                          <Icon
+                            icon="fluent:tree-deciduous-20-filled"
+                            width={26}
+                            height={26}
+                          />
+                        )}
+                        <span className="item-name lg:block hidden ml-2 w-[140px] text-cus-unactivated whitespace-nowrap text-ellipsis overflow-hidden">
                           {list.type}
                         </span>
                       </JumpLink>
@@ -76,8 +95,14 @@ const Sidebar = () => {
               <Link
                 href="/about"
                 className="flex items-center hover:no-underline">
-                <ImInfo size={24} />
-                <span className="logo-detail lg:block hidden leading-7 ml-2 whitespace-nowrap text-ellipsis overflow-hidden">关于本站</span>
+                <Icon
+                  icon="mdi:information"
+                  width={24}
+                  height={24}
+                />
+                <span className="logo-detail lg:block hidden leading-7 ml-2 whitespace-nowrap text-ellipsis overflow-hidden">
+                  关于本站
+                </span>
               </Link>
             </li>
           </ul>

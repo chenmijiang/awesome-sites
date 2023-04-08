@@ -103,3 +103,7 @@ export const getStaticProps: GetStaticProps<{ bingImg: string }> = async () => {
     revalidate: 60 * 60 * 1 // 1小时更新一次
   }
 }
+
+// export const getServerSideProps = async () => {
+//   _api.setFetch(fetch)
+// }
