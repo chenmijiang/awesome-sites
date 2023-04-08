@@ -11,7 +11,7 @@ type Props = {
 const Card = ({ site }: Props) => {
   const name = site.name
   const link = site.link
-  const desc = site.desc ? site.desc : '暂无描述'
+  const desc = site.desc ? site.desc : '虽然没有描述，但是强烈推荐'
   if (site === undefined) {
     console.log('site is undefined')
   }
@@ -19,11 +19,11 @@ const Card = ({ site }: Props) => {
     <CardContainer
       href={link}
       target="_blank"
-      className="transition-all duration-300 bg-white cursor-pointer w-100% text-center min-h-[50px] rounded-[6px] transition-all-200 border-solid border border-[#e9e9e9]">
-      <div className="leading-[50px] text-[#0000EE] text-[18px] h-[50px] lh-[50px] border-b-[1px] border-solid border-b-[#e9e9e9]">
+      className="w-full text-center min-h-[50px] rounded-md bg-white cursor-pointer shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+      <div className="leading-[50px] text-cus-normal text-[18px] h-[50px] lh-[50px] border-b-[1px] border-solid border-b-[#e9e9e9]">
         <span>{name}</span>
       </div>
-      <div className="color-gray-500 text-[14px] p-[15px] text-left">
+      <div className="color-gray-500 text-cus-unactivated text-[14px] p-[15px] text-left">
         <span>{desc}</span>
       </div>
     </CardContainer>
@@ -32,15 +32,6 @@ const Card = ({ site }: Props) => {
 
 const CardContainer = styled.a`
   text-decoration: none;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 4px 4px 9px #bfbfbf, -4px -4px 9px #dedede;
-  }
-
-  &:active {
-    box-shadow: 2px 2px 4px #999, -2px -2px 4px #ffffff;
-  }
 
   /*去除未被访问的a标签的下划线*/
   &:link {

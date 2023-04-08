@@ -9,15 +9,23 @@ import SitesList from '@/components/home/SitesList'
 import Footer from '@/components/home/Footer'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { fetchBingImg } from '@/util/fetch-bing-image'
-import { useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import styled from 'styled-components'
 
 // 网页结构（flex布局）侧边栏（左侧），主体（右侧），侧边栏固定220px。主体有显示和隐藏侧边栏的按钮。改变窗口大小，小于 768px，侧边栏隐藏，主体宽度 100%
 
 export default function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
   const [sideBarShow, setSideBarShow] = useState(true)
+  useLayoutEffect(() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('sideBarShow') !== null) {
+      setSideBarShow(JSON.parse(localStorage.getItem('sideBarShow')!))
+    }
+  }, [])
   const isToggleShow = () => {
-    setSideBarShow(!sideBarShow)
+    setSideBarShow((pre) => {
+      localStorage.setItem('sideBarShow', JSON.stringify(!pre))
+      return !pre
+    })
   }
   return (
     <HomeWrapper>

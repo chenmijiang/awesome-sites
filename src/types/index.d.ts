@@ -13,7 +13,7 @@ type HotSite = {
    * 站点链接
    */
   link: string
-  logo?: any
+  logo: any
 }
 
 export type searchEngines = {

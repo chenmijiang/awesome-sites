@@ -53,8 +53,8 @@ const SearchContent = ({ url }: Props) => {
         <div
           className={`searchbox${
             focusActive
-              ? ' bg-zinc-200/90 md:w-[670px] text-gray-800'
-              : ' bg-zinc-200/50 md:w-[470px] text-gray-300 md:hover:w-[670px]'
+              ? ' bg-zinc-200 md:w-[670px] text-cus-normal'
+              : ' bg-zinc-200/50 md:w-[470px] text-zinc-200/50 md:hover:w-[670px]'
           } w-[80vw] h-[46px] transition-all delay-75 relative px-4 box-border  rounded-3xl`}
           onClick={(e) => e.stopPropagation()}>
           {/* 搜索框 */}

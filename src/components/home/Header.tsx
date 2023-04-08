@@ -9,15 +9,15 @@ type Props = {
 
 const Header = (props: Props) => {
   return (
-    <div className="main-head fixed w-full top-0 left-0 md:pl-[60px] pl-0 z-10">
-      <div className="head-bg w-full h-[60px] backdrop-blur transition-colors duration-500 bg-white/70 supports-backdrop-blur:bg-white/60">
-        <div className="py-2 px-4 navbar flex items-center justify-between">
+    <div className="main-head fixed w-full top-0 left-0 md:pl-[60px] pl-0 z-10 transition-width">
+      <div className="head-bg w-full h-[50px] backdrop-blur transition-colors duration-500 bg-white/70 supports-backdrop-blur:bg-white/60">
+        <div className="px-4 h-full navbar flex items-center justify-between">
           <div className="container-fluid flex">
             <div className="py-2">
               <span
                 className="cursor-pointer"
                 onClick={props.isToggleShow}>
-                <FaAlignLeft size={26} />
+                <FaAlignLeft size={20} />
               </span>
             </div>
             <div className="collapse navbar-collapse order-2 order-md-1" />
@@ -29,7 +29,7 @@ const Header = (props: Props) => {
                 <Link
                   href="/"
                   className="flex items-center hover:no-underline transition-colors">
-                  <FaLaptop size={26} />
+                  <FaLaptop size={24} />
                   <span className="ml-1 text-lg">首页</span>
                 </Link>
               </li>

@@ -45,11 +45,13 @@ p {
 }
 
 a {
-  /*color: var(--color-theme-1);*/
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:active,
+a:visited,
+a:focus {
   text-decoration: underline;
 }
 

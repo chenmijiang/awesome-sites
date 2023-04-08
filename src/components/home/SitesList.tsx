@@ -9,7 +9,7 @@ const SitesList = () => {
       {allSites.map((list, index) => {
         return (
           <div
-            className="site-block my-[30px]"
+            className="my-[30px]"
             key={index}>
             <CategoryTitle category={list} />
             <div className="grid grid-cols-list gap-3">
