@@ -3,7 +3,11 @@ import { Icon } from '@iconify-icon/react'
 export const teamBlog = {
   type: '技术团队博客',
   icon: (
-    <Icon icon="fluent:people-team-20-filled" width={26} height={26} />
+    <Icon
+      icon="fluent:people-team-20-filled"
+      width={26}
+      height={26}
+    />
   ),
   sites: [
     {
@@ -58,6 +62,11 @@ export const blog = {
       name: '鑫空间，鑫生活',
       link: 'https://www.zhangxinxu.com/wordpress/',
       desc: '张鑫旭大佬的技术博客'
+    },
+    {
+      name: 'ChokCoco - 博客园',
+      link: 'https://www.cnblogs.com/coco1s',
+      desc: '国服第一切图仔，万物皆可 CSS'
     },
     {
       name: 'robinwieruch',

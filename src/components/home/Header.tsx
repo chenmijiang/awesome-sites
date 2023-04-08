@@ -12,16 +12,17 @@ const Header = (props: Props) => {
       <div className="head-bg w-full h-[50px] backdrop-blur transition-colors duration-500 bg-white/70 supports-backdrop-blur:bg-white/60">
         <div className="px-4 h-full navbar flex items-center justify-between">
           <div className="container-fluid flex">
-            <div className="py-2">
+            <div className="py-2 mr-8 md:block hidden">
               <span
                 className="cursor-pointer h-full flex items-center"
                 onClick={props.isToggleShow}>
                 <Icon icon="material-symbols:left-panel-close-rounded" width={28} height={28} />
               </span>
             </div>
-            <div className="collapse navbar-collapse order-2 order-md-1" />
+            {/* 移动端侧边栏开关按钮 */}
             <div className="header-mini-btn"></div>
-            <ul className="navbar-nav navbar-top site-menu ml-8 flex">
+            {/* 跳转链接：首页、AI */}
+            <ul className="navbar-nav navbar-top site-menu flex">
               <li
                 id="menu-item-28"
                 className="h-full flex justify-center items-center mr-4">

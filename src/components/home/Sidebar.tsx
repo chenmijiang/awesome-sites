@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Link as JumpLink } from 'react-scroll'
+import { Link as AnchorLink } from 'react-scroll'
 
 import { allSites } from '@/configs/sites'
 import { Icon } from '@iconify-icon/react'
@@ -36,7 +36,7 @@ const Sidebar = () => {
             <SimpleBar style={{ height: 'calc(100vh - 120px)', outline: 'none' }}>
               <ul>
                 <li className="sidebar-item leading-10 ml-3 my-3">
-                  <JumpLink
+                  <AnchorLink
                     to="热门站点"
                     activeClass="active"
                     spy={true}
@@ -52,7 +52,7 @@ const Sidebar = () => {
                     <span className="item-name lg:block hidden ml-2 text-cus-unactivated text-ellipsis whitespace-nowrap overflow-hidden">
                       热门站点
                     </span>
-                  </JumpLink>
+                  </AnchorLink>
                 </li>
                 {allSites.map((list, index) => {
                   return (
@@ -60,7 +60,7 @@ const Sidebar = () => {
                       className="sidebar-item leading-10 ml-3 my-2"
                       title={list.type}
                       key={index}>
-                      <JumpLink
+                      <AnchorLink
                         activeClass="active"
                         spy={true}
                         smooth={true}
@@ -80,7 +80,7 @@ const Sidebar = () => {
                         <span className="item-name lg:block hidden ml-2 w-[140px] text-cus-unactivated whitespace-nowrap text-ellipsis overflow-hidden">
                           {list.type}
                         </span>
-                      </JumpLink>
+                      </AnchorLink>
                     </li>
                   )
                 })}

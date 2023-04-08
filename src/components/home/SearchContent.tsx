@@ -34,7 +34,7 @@ const SearchContent = ({ url }: Props) => {
   }
   return (
     <div
-      className="h-[300px] overflow-hidden rounded-lg bg-center bg-cover mt-[80px] mb-6 relative"
+      className="h-[300px] overflow-hidden rounded-lg bg-center bg-cover mb-6 relative"
       onMouseLeave={() => {
         setfocusActive((pre) => false)
         searchRef.current?.blur()

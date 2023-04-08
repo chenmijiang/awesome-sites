@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import { Icon } from '@iconify-icon/react'
-
 import { hotSites } from '@/configs/hotSites'
 
 const HotSites = () => {
@@ -25,7 +24,6 @@ const HotSites = () => {
             key={index}
             href={site.link}
             target="_blank"
-            rel="noreferer"
             className="flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 py-2 px-4 bg-white shadow-sm text-cus-normal hover:text-cus-activated hover:shadow-md hover:-translate-y-1 transition duration-300">
             {site.logo && (
               <Image
