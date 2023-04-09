@@ -1,11 +1,8 @@
+import { Site } from '@/types'
 import styled from 'styled-components'
 
 type Props = {
-  site: {
-    name: string
-    link?: string
-    desc: string
-  }
+  site: Site
 }
 
 const Card = ({ site }: Props) => {

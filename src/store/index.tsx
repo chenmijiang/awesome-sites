@@ -43,9 +43,7 @@ export const AppProvider = (props: {
     | undefined
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  return (
-    <AppContext.Provider value={{ state, dispatch }}>{props.children}</AppContext.Provider>
-  )
+  return <AppContext.Provider value={{ state, dispatch }}>{props.children}</AppContext.Provider>
 }
 
 export default AppProvider

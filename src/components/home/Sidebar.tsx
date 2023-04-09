@@ -1,13 +1,16 @@
 import Link from 'next/link'
 import { Link as AnchorLink } from 'react-scroll'
-
-import { allSites } from '@/configs/sites'
 import { Icon } from '@iconify-icon/react'
-
 import SimpleBar from 'simplebar-react'
-import 'simplebar-react/dist/simplebar.min.css'
 
-const Sidebar = () => {
+import 'simplebar-react/dist/simplebar.min.css'
+import { SideBarSite } from '@/types'
+
+type Props = {
+  sites: SideBarSite[]
+}
+
+const Sidebar = (props: Props) => {
   return (
     <div
       id="sidebar"
@@ -35,26 +38,7 @@ const Sidebar = () => {
           <div className="sidebar-scroll h-full">
             <SimpleBar style={{ height: 'calc(100vh - 120px)', outline: 'none' }}>
               <ul>
-                <li className="sidebar-item leading-10 ml-3 my-3">
-                  <AnchorLink
-                    to="热门站点"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-500}
-                    duration={500}
-                    className="flex items-center hover:no-underline h-[30px] cursor-pointer">
-                    <Icon
-                      icon="solar:fire-bold"
-                      width={26}
-                      height={26}
-                    />
-                    <span className="item-name lg:block hidden ml-2 text-cus-unactivated text-ellipsis whitespace-nowrap overflow-hidden">
-                      热门站点
-                    </span>
-                  </AnchorLink>
-                </li>
-                {allSites.map((list, index) => {
+                {props.sites.map((list, index) => {
                   return (
                     <li
                       className="sidebar-item leading-10 ml-3 my-2"
@@ -64,7 +48,7 @@ const Sidebar = () => {
                         activeClass="active"
                         spy={true}
                         smooth={true}
-                        offset={-70}
+                        offset={index === 0 ? -500 : -70}
                         duration={500}
                         to={list.type}
                         className="flex items-center hover:no-underline h-[30px] cursor-pointer">

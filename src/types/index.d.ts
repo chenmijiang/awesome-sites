@@ -4,7 +4,7 @@ export type Site = {
   desc: string
 }
 
-type HotSite = {
+export type HotSite = {
   /**
    * 站点名称
    */
@@ -14,6 +14,11 @@ type HotSite = {
    */
   link: string
   logo: any
+}
+
+export type SideBarSite = {
+  type: string
+  icon: JSX.Element
 }
 
 export type searchEngines = {

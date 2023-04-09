@@ -1,5 +1,5 @@
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react'
-import { useEffect, useState, useContext } from 'react'
+import { useContext } from 'react'
 import styled from 'styled-components'
 
 import Header from '@/components/home/Header'
@@ -7,6 +7,7 @@ import Sidebar from '@/components/home/Sidebar'
 import Footer from '@/components/home/Footer'
 
 import { AppContext } from '@/store/index'
+import { SideBarSite } from '@/types'
 
 // 网页结构（flex布局）侧边栏（左侧），主体（右侧），侧边栏固定220px。主体有显示和隐藏侧边栏的按钮。改变窗口大小，小于 768px，侧边栏隐藏，主体宽度 100%
 const Layout = (props: {
@@ -19,6 +20,7 @@ const Layout = (props: {
     | ReactPortal
     | null
     | undefined
+  sites: SideBarSite[]
 }) => {
   const { state, dispatch } = useContext(AppContext)
 
@@ -35,7 +37,7 @@ const Layout = (props: {
           state.sideBarShow ? '' : ' mini-sidebar'
         }`}>
         {/* 侧边栏 */}
-        <Sidebar />
+        <Sidebar sites={props.sites} />
         <div className="main px-2 md:ml-[60px] ml-0 relative">
           {/* 导航 */}
           <Header

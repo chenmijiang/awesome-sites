@@ -1,18 +1,18 @@
-import Layout from '@/components/ui/layout'
 import { GetStaticPaths, InferGetStaticPropsType } from 'next'
 import SitesList from '@/components/home/SitesList'
+import MainLayout from '@/components/ui/MainLayout'
 
 import { allSites } from '@/configs/sites'
 
 const TagPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const sites = allSites.filter((site) => site.type === props.type)
   if (sites.length === 0) {
-    return <div>loading...</div>
+    return <div className="w-screen h-screen text-5xl text-center leading-[90vh]">loading...</div>
   }
   return (
-    <Layout>
+    <MainLayout sites={sites.map((site) => ({ type: site.type, icon: site.icon }))}>
       <SitesList sites={sites} />
-    </Layout>
+    </MainLayout>
   )
 }
 

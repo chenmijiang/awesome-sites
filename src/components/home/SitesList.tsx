@@ -1,17 +1,10 @@
 import Link from 'next/link'
 import Card from './Card'
 import CategoryTitle from './CategoryTitle'
+import { allSites } from '@/configs/sites'
 
 type Props = {
-  sites: {
-    type: string
-    icon: JSX.Element
-    sites: {
-      name: string
-      link: string
-      desc: string
-    }[]
-  }[]
+  sites: typeof allSites
 }
 
 const SitesList = (props: Props) => {

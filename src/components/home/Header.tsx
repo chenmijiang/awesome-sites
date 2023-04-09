@@ -25,13 +25,13 @@ const Header = (props: Props) => {
               </span>
             </div>
             {/* 移动端侧边栏开关按钮 */}
-            <div className="header-mini-btn py-2 mr-8 md:hidden block">
+            <div className="header-mini-btn py-2 mr-8 hidden">
               <span className="cursor-pointer h-full flex items-center">
-                <Icon
+                {/* <Icon
                   icon="charm:menu-hamburger"
                   width={28}
                   height={28}
-                />
+                /> */}
               </span>
             </div>
             {/* 跳转链接：首页、AI */}
