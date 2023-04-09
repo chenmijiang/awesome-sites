@@ -1,9 +1,16 @@
-import { techSites } from './techSites';
-import { weekly } from "./weekly";
-import { blog, teamBlog } from "./blog";
-import { spec } from "./spec";
-import { ossSites } from "./ossSites";
-import { cssUtilSites, jsUtilSites, picUtilsSites, regexpUtilsSites, serviceUtilSites} from './utilSites';
+import { techSites } from './techSites'
+import { weekly } from './weekly'
+import { blog, teamBlog } from './blog'
+import { spec } from './spec'
+import { ossSites } from './ossSites'
+import {
+  cssUtilSites,
+  jsUtilSites,
+  picUtilsSites,
+  regexpUtilsSites,
+  serviceUtilSites,
+  docUtilsSites
+} from './utilSites'
 
 export const allSites = [
   // 技术站点
@@ -21,6 +28,7 @@ export const allSites = [
   cssUtilSites,
   jsUtilSites,
   picUtilsSites,
+  docUtilsSites,
   regexpUtilsSites,
-  serviceUtilSites,
+  serviceUtilSites
 ]

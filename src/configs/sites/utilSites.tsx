@@ -199,6 +199,18 @@ export const picUtilsSites = {
   ]
 }
 
+export const docUtilsSites = {
+  type: '工具-文档',
+  icon: <Icon icon="ci:file-pdf" width={26} height={26} />,
+  sites: [
+    {
+      name: 'i Love PDF',
+      link: 'https://www.ilovepdf.com/zh-cn/compress_pdf',
+      desc: '在线编辑PDF，合并PDF，拆分PDF，压缩PDF，PDF转换'
+    }
+  ]
+}
+
 export const regexpUtilsSites = {
   type: '工具-正则',
   icon: (
