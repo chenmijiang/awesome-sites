@@ -4,6 +4,7 @@ import { Icon } from '@iconify-icon/react'
 
 type Props = {
   isToggleShow: () => void
+  show: boolean
 }
 
 const Header = (props: Props) => {
@@ -16,11 +17,23 @@ const Header = (props: Props) => {
               <span
                 className="cursor-pointer h-full flex items-center"
                 onClick={props.isToggleShow}>
-                <Icon icon="material-symbols:left-panel-close-rounded" width={28} height={28} />
+                <Icon
+                  icon={`material-symbols:left-panel-${props.show ? 'close' : 'open'}-rounded`}
+                  width={28}
+                  height={28}
+                />
               </span>
             </div>
             {/* 移动端侧边栏开关按钮 */}
-            <div className="header-mini-btn"></div>
+            <div className="header-mini-btn py-2 mr-8 md:hidden block">
+              <span className="cursor-pointer h-full flex items-center">
+                <Icon
+                  icon="charm:menu-hamburger"
+                  width={28}
+                  height={28}
+                />
+              </span>
+            </div>
             {/* 跳转链接：首页、AI */}
             <ul className="navbar-nav navbar-top site-menu flex">
               <li
@@ -43,7 +56,11 @@ const Header = (props: Props) => {
                 <Link
                   href="/ai"
                   className="flex items-center hover:no-underline transition-colors">
-                  <Icon icon="logos:airbnb-icon" width={20} height={20} />
+                  <Icon
+                    icon="logos:airbnb-icon"
+                    width={20}
+                    height={20}
+                  />
                   <span className="ml-1 text-lg">AI</span>
                 </Link>
               </li>

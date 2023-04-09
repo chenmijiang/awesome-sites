@@ -24,7 +24,7 @@ const Sidebar = () => {
                 width={24}
                 height={24}
               />
-              <h1 className="logo-detail lg:block hidden text-xl leading-[50px] ml-2 font-bold">
+              <h1 className="logo-detail lg:block hidden text-xl leading-[50px] ml-2 font-bold text-ellipsis whitespace-nowrap overflow-hidden">
                 前端森林
               </h1>
             </Link>
@@ -94,7 +94,7 @@ const Sidebar = () => {
             <li className="flex justify-center items-center">
               <Link
                 href="/about"
-                className="flex items-center hover:no-underline">
+                className="flex items-center justify-center hover:no-underline w-full">
                 <Icon
                   icon="mdi:information"
                   width={24}

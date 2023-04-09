@@ -46,7 +46,7 @@ const SearchContent = ({ url }: Props) => {
         src={url}
         alt={''}
         fill={true}
-        className={`object-cover transition${focusActive ? ' blur scale-110' : ''}`}
+        className={`object-cover transition${focusActive ? ' blur scale-110 brightness-75' : ''}`}
       />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         {/* 输入框 */}
@@ -54,7 +54,7 @@ const SearchContent = ({ url }: Props) => {
           className={`searchbox${
             focusActive
               ? ' bg-zinc-200 md:w-[670px] text-cus-normal'
-              : ' bg-zinc-200/50 md:w-[470px] text-zinc-200/50 md:hover:w-[670px]'
+              : ' bg-zinc-200/50 md:w-[470px] text-transparent md:hover:w-[670px]'
           } w-[80vw] h-[46px] transition-all delay-75 relative px-4 box-border  rounded-3xl`}
           onClick={(e) => e.stopPropagation()}>
           {/* 搜索框 */}
@@ -76,7 +76,7 @@ const SearchContent = ({ url }: Props) => {
           <div className="absolute left-[20px] -top-3/4 h-[30px] overflow-y-hidden items-center transition delay-200">
             <div
               className={`flex  transition ${
-                focusActive ? 'translate-y-0' : 'translate-y-[110%]'
+                focusActive ? 'translate-y-0' : 'translate-y-[120%]'
               }`}>
               <div className="add-engines flex items-center">
                 <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
@@ -87,7 +87,7 @@ const SearchContent = ({ url }: Props) => {
                 <div
                   key={item.id}
                   className={`ml-2 cursor-pointer ${
-                    searchEngines.currentEngine === +item.id ? 'text-gray-100' : 'text-gray-400'
+                    searchEngines.currentEngine === +item.id ? 'text-white font-semibold' : 'text-white/50'
                   }`}
                   onClick={() => {
                     searchRef.current?.focus()

@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app'
 import '@/styles/globals.css'
 import '@/styles/font-awesome.min.css'
 
+import { AppProvider } from '@/store'
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -18,7 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
           content="前端酷站 尽收眼底"
         />
       </Head>
-      <Component {...pageProps} />
+      <AppProvider>
+        <Component {...pageProps} />
+      </AppProvider>
     </>
   )
 }

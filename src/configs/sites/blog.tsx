@@ -32,7 +32,7 @@ export const blog = {
   type: '高质量个人博客',
   icon: (
     <Icon
-      icon="ic:baseline-account-box"
+      icon="material-symbols:person-rounded"
       width={26}
       height={26}
     />
