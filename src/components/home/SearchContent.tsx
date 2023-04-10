@@ -1,8 +1,7 @@
 import Image from 'next/image'
-
 import { Icon } from '@iconify-icon/react'
-
 import { useEffect, useRef, useState } from 'react'
+import styled from 'styled-components'
 
 import {
   getAllSearchEngines,
@@ -10,7 +9,6 @@ import {
   searchEngines as ses
 } from '@/configs/searchEngines'
 import { filterSearchWord } from '@/util/filter-search'
-import styled from 'styled-components'
 
 type Props = {
   url: string
@@ -18,6 +16,7 @@ type Props = {
 
 const SearchContent = ({ url }: Props) => {
   const searchRef = useRef<HTMLInputElement>(null)
+  const leaveFoucusRef = useRef<boolean>(true)
   const [focusActive, setfocusActive] = useState(false)
   const [searchEngines, setSearchEngines] = useState(ses)
   useEffect(() => {
@@ -32,16 +31,20 @@ const SearchContent = ({ url }: Props) => {
       window.open(searchURL, '_blank')
     }
   }
+  const leaveFoucusHandler = () => {
+    leaveFoucusRef.current = true
+    setfocusActive((pre) => {
+      if (pre) {
+        searchRef.current?.blur()
+        searchRef.current!.value = ''
+      }
+      return false
+    })
+  }
   return (
     <div
       className="h-[300px] overflow-hidden rounded-lg bg-center bg-cover mb-6 relative"
-      onMouseLeave={() => {
-        setfocusActive((pre) => false)
-        searchRef.current?.blur()
-      }}
-      onClick={() => {
-        setfocusActive((pre) => false)
-      }}>
+      onClick={leaveFoucusHandler}>
       <Image
         src={url}
         alt={''}
@@ -67,6 +70,12 @@ const SearchContent = ({ url }: Props) => {
             }}
             onClick={() => {
               setfocusActive(true)
+              leaveFoucusRef.current = false
+            }}
+            onBlur={() => {
+              if (leaveFoucusRef.current) {
+                setfocusActive(false)
+              }
             }}
             maxLength={150}
             type="text"
@@ -87,7 +96,9 @@ const SearchContent = ({ url }: Props) => {
                 <div
                   key={item.id}
                   className={`ml-2 cursor-pointer ${
-                    searchEngines.currentEngine === +item.id ? 'text-white font-semibold' : 'text-white/50'
+                    searchEngines.currentEngine === +item.id
+                      ? 'text-white font-semibold'
+                      : 'text-white/50'
                   }`}
                   onClick={() => {
                     searchRef.current?.focus()
@@ -109,7 +120,11 @@ const SearchContent = ({ url }: Props) => {
           <div
             className="absolute top-0 right-3 h-full flex items-center cursor-pointer"
             onClick={searchEvent}>
-            <Icon icon="ph:magnifying-glass-bold" width={26} height={26} />
+            <Icon
+              icon="ph:magnifying-glass-bold"
+              width={26}
+              height={26}
+            />
           </div>
         </div>
       </div>
