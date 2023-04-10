@@ -34,10 +34,10 @@ const SitesList = (props: Props) => {
           )
         })}
       </section>
-      <div className='text-center my-3'>
+      <div className="pt-[30px] flex justify-center">
         <Link
           href="/"
-          className="text-base inline-block w-24 py-1 px-2 bg-red-400 text-white/90 rounded-2xl">
+          className="hover:top-[2px] hover:bg-[#333] hover:shadow-none hover:transition-all !text-white relative top-0 p-[10px_75px] bg-[#f1404b] font-semibold rounded-[900px] transition-all shadow-[0px_5px_20px_-3px_rgba(249,100,90,0.6)]">
           返回首页
         </Link>
       </div>
