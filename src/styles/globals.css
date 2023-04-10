@@ -16,6 +16,12 @@
   --color-text: rgba(0, 0, 0, 0.7);
   --column-width: 42rem;
   --column-margin-top: 4rem;
+  --page-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ),
+  linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
   font-family: var(--font-body);
   color: var(--color-text);
 }
@@ -30,12 +36,21 @@ body {
   background-attachment: fixed;
   background-color: var(--color-bg-1);
   background-size: 100vw 100vh;
-  background-image: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(255, 255, 255, 0.75) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+  background-image: var(--page-image);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--page-image);
+  background-size: 100vw 100vh;
+  z-index: -1;
+  -webkit-transform: translateZ(0);
+  pointer-events: none;
 }
 
 h1,

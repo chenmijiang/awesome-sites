@@ -17,6 +17,7 @@ import chatgpt from '@/lib/images/logos/chatgpt.png'
 import next from '@/lib/images/logos/next.png'
 import ant_design from '@/lib/images/logos/ant_design.png'
 import leetcode from '@/lib/images/logos/leetcode.ico'
+import dict_code from '@/lib/images/logos/dict_code.png'
 
 export const hotSites: HotSite[] = [
   {
@@ -28,6 +29,11 @@ export const hotSites: HotSite[] = [
     name: 'ChatGPT',
     link: 'https://chat.openai.com/chat',
     logo: chatgpt
+  },
+  {
+    name: '编程字典',
+    link: 'http://dict.code-nav.cn/',
+    logo: dict_code
   },
   {
     name: 'React',
