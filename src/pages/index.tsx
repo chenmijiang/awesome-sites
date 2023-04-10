@@ -1,7 +1,7 @@
 import HotSites from '@/components/HotSites'
 // import CustomSites from '@/pages/home/CustomSites'
 import SearchContent from '@/components/home/SearchContent'
-import MainLayout from '@/components/ui/MainLayout'
+import MainPanel from '@/components/ui/MainPanel'
 
 // import Bulletin from '@/components/home/Bulletin'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
@@ -26,7 +26,7 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
   sites.push(...allSites.map((site) => ({ type: site.type, icon: site.icon })))
 
   return (
-    <MainLayout sites={sites}>
+    <MainPanel sites={sites}>
       {/* 消息通知 */}
       {/* <Bulletin /> */}
       {/* 搜索 */}
@@ -37,7 +37,7 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
       <HotSites></HotSites>
       {/* 站点列表 */}
       <AllSitesList />
-    </MainLayout>
+    </MainPanel>
   )
 }
 

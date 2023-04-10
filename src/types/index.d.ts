@@ -19,6 +19,8 @@ export type HotSite = {
 export type SideBarSite = {
   type: string
   icon: JSX.Element
+  anchor?: boolean
+  link?: string
 }
 
 export type searchEngines = {

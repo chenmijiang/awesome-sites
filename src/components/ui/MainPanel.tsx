@@ -10,7 +10,7 @@ import { AppContext } from '@/store/index'
 import { SideBarSite } from '@/types'
 
 // 网页结构（flex布局）侧边栏（左侧），主体（右侧），侧边栏固定220px。主体有显示和隐藏侧边栏的按钮。改变窗口大小，小于 768px，侧边栏隐藏，主体宽度 100%
-const Layout = (props: {
+const MainPanel = (props: {
   children:
     | string
     | number
@@ -94,4 +94,4 @@ const LayoutWrapper = styled.div.attrs({
   }
 `
 
-export default Layout
+export default MainPanel
