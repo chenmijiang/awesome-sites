@@ -1,28 +1,8 @@
 import { GetStaticPaths, InferGetStaticPropsType } from 'next'
-import { Icon } from '@iconify-icon/react'
-import SitesList from '@/components/home/SitesList'
+import ATagSitesList from '@/components/home/ATagSitesList'
 import MainPanel from '@/components/ui/MainPanel'
 
-import { allSites } from '@/configs/sites'
-
-const tagsSites = [
-  {
-    type: '热门站点',
-    anchor: false,
-    icon: (
-      <Icon
-        icon="solar:fire-bold"
-        width={26}
-        height={26}
-      />
-    )
-  },
-  ...allSites.map((site) => ({
-    type: site.type,
-    icon: site.icon,
-    anchor: false
-  }))
-]
+import { allSites } from '@/configs/all.sites'
 
 const TagPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const sites = allSites.filter((site) => site.type === props.type)
@@ -31,8 +11,8 @@ const TagPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   }
 
   return (
-    <MainPanel sites={tagsSites}>
-      <SitesList sites={sites} />
+    <MainPanel sites={sites}>
+      <ATagSitesList sites={sites} />
     </MainPanel>
   )
 }

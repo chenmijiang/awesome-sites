@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import { Icon } from '@iconify-icon/react'
-import { hotSites } from '@/configs/hotSites'
+import { hotSites } from '@/configs/hot.sites'
 import { sortSitesByLevel } from '@/util/sites.util'
 
 const sortHotSites = sortSitesByLevel(hotSites)

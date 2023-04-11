@@ -34,7 +34,7 @@ const Header = (props: Props) => {
                 /> */}
               </span>
             </div>
-            {/* 跳转链接：首页、AI */}
+            {/* 跳转链接：首页、tools */}
             <ul className="navbar-nav navbar-top site-menu flex">
               <li
                 id="menu-item-28"
@@ -54,14 +54,14 @@ const Header = (props: Props) => {
                 id="menu-item-28"
                 className="h-full flex justify-center items-center mr-4">
                 <Link
-                  href="/ai"
-                  className="flex items-center hover:no-underline transition-colors">
+                  href="/toolbox"
+                  className="flex items-center hover:no-underline transition-color">
                   <Icon
-                    icon="logos:airbnb-icon"
-                    width={20}
-                    height={20}
+                    icon="mingcute:tool-line"
+                    width={24}
+                    height={24}
                   />
-                  <span className="ml-1 text-lg">AI</span>
+                  <span className="ml-1 text-lg">工具</span>
                 </Link>
               </li>
             </ul>

@@ -1,35 +1,32 @@
-import Link from 'next/link'
 import Card from './Card'
 import CategoryTitle from './CategoryTitle'
 import { ATagSites } from '@/types'
-import { sortATagSitesByLevel } from '@/util/sites.util'
+import { sortSitesByLevel } from '@/util/sites.util'
 
 type Props = {
   sites: ATagSites[]
-  sort?: boolean
+  limit?: number
 }
 
 const SitesList = (props: Props) => {
-  let sortATagSites = props.sites
-  if (props.sort !== false) {
-    for (let i = 0; i < sortATagSites.length; i++) {
-      sortATagSites[i] = sortATagSitesByLevel(sortATagSites[i])
-    }
-  }
+  let sortSites = sortSitesByLevel(props.sites)
+  let limit = props.limit || 12
+
   return (
     <>
-      <section className="all-sites">
-        {sortATagSites.map((list, index) => {
-          return (
-            <div
-              className="my-[30px]"
-              key={index}>
-              <CategoryTitle
-                category={list}
-                more={false}
-              />
-              <div className="grid grid-cols-list gap-3">
-                {list.sites.map((site, i) => {
+      {sortSites.map((list, index) => {
+        return (
+          <div
+            className="my-[30px]"
+            key={index}>
+            <CategoryTitle
+              category={list}
+              more={list.sites.length > limit}
+            />
+            <div className="grid grid-cols-list gap-3">
+              {sortSitesByLevel(list.sites)
+                .slice(0, limit)
+                .map((site, i) => {
                   return (
                     <Card
                       site={site}
@@ -37,18 +34,10 @@ const SitesList = (props: Props) => {
                     />
                   )
                 })}
-              </div>
             </div>
-          )
-        })}
-      </section>
-      <div className="pt-[30px] flex justify-center">
-        <Link
-          href="/"
-          className="hover:top-[2px] hover:bg-[#333] hover:shadow-none hover:transition-all !text-white relative top-0 p-[10px_75px] bg-[#f1404b] font-semibold rounded-[900px] transition-all shadow-[0px_5px_20px_-3px_rgba(249,100,90,0.6)]">
-          返回首页
-        </Link>
-      </div>
+          </div>
+        )
+      })}
     </>
   )
 }

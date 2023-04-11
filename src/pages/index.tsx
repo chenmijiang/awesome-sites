@@ -6,9 +6,9 @@ import MainPanel from '@/components/ui/MainPanel'
 // import Bulletin from '@/components/home/Bulletin'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { fetchBingImg } from '@/util/fetch-bing-image'
-import AllSitesList from '@/components/home/AllSitesList'
 import { Icon } from '@iconify-icon/react'
-import { allSites } from '@/configs/sites'
+import { homeSites } from '@/configs/home.sites'
+import SitesList from '@/components/home/SitesList'
 
 export default function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
   let sites = [
@@ -23,7 +23,7 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
       )
     }
   ]
-  sites.push(...allSites.map((site) => ({ type: site.type, icon: site.icon })))
+  sites.push(...homeSites.map((site) => ({ type: site.type, icon: site.icon })))
 
   return (
     <MainPanel sites={sites}>
@@ -36,7 +36,7 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
       {/* 热门站点 */}
       <HotSites></HotSites>
       {/* 站点列表 */}
-      <AllSitesList />
+      <SitesList sites={homeSites} />
     </MainPanel>
   )
 }
