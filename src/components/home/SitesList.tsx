@@ -2,16 +2,24 @@ import Link from 'next/link'
 import Card from './Card'
 import CategoryTitle from './CategoryTitle'
 import { ATagSites } from '@/types'
+import { sortATagSitesByLevel } from '@/util/sites.util'
 
 type Props = {
   sites: ATagSites[]
+  sort?: boolean
 }
 
 const SitesList = (props: Props) => {
+  let sortATagSites = props.sites
+  if (props.sort !== false) {
+    for (let i = 0; i < sortATagSites.length; i++) {
+      sortATagSites[i] = sortATagSitesByLevel(sortATagSites[i])
+    }
+  }
   return (
     <>
       <section className="all-sites">
-        {props.sites.map((list, index) => {
+        {sortATagSites.map((list, index) => {
           return (
             <div
               className="my-[30px]"

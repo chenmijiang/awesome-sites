@@ -2,6 +2,9 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { Icon } from '@iconify-icon/react'
 import { hotSites } from '@/configs/hotSites'
+import { sortSitesByLevel } from '@/util/sites.util'
+
+const sortHotSites = sortSitesByLevel(hotSites)
 
 const HotSites = () => {
   return (
@@ -19,7 +22,7 @@ const HotSites = () => {
         </h2>
       </div>
       <div className="flex flex-wrap my-[20px] gap-4">
-        {hotSites.map((site, index) => (
+        {sortHotSites.map((site, index) => (
           <HotSiteLink
             key={index}
             href={site.link}

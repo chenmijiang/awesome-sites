@@ -24,6 +24,7 @@ export type SideBarSite = {
   icon: JSX.Element
   anchor?: boolean
   link?: string
+  level?: number
 }
 
 export type SearchEngines = {

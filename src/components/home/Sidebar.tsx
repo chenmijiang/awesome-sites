@@ -3,12 +3,15 @@ import { Icon } from '@iconify-icon/react'
 import MixedLink from '@/components/MixedLink'
 import ScrollPanel from '@/components/ui/ScrollPanel'
 import { SideBarSite } from '@/types'
+import { sortSitesByLevel } from '@/util/sites.util'
 
 type Props = {
   sites: SideBarSite[]
 }
 
 const Sidebar = (props: Props) => {
+  let sortSites = sortSitesByLevel(props.sites)
+
   return (
     <div
       id="sidebar"
@@ -38,7 +41,7 @@ const Sidebar = (props: Props) => {
             className="sidebar-scroll h-full"
             style={{ height: 'calc(100vh - 120px)', outline: 'none' }}>
             <ul>
-              {props.sites.map((list, index) => {
+              {sortSites.map((list, index) => {
                 return (
                   <li
                     className="sidebar-item leading-10 ml-3 my-2"
