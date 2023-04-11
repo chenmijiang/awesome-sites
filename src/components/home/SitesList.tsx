@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Card from './Card'
 import CategoryTitle from './CategoryTitle'
-import { allSites } from '@/configs/sites'
+import { ATagSites } from '@/types'
 
 type Props = {
-  sites: typeof allSites
+  sites: ATagSites[]
 }
 
 const SitesList = (props: Props) => {

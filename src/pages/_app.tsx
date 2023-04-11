@@ -16,6 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <title>前端森林</title>
         <meta
+          name="keywords"
+          content="前端，"
+        />
+        <meta
           name="description"
           content="前端酷站 尽收眼底"
         />

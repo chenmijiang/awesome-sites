@@ -1,19 +1,22 @@
-export type Site = {
+type BaseSite = {
   name: string
   link: string
+  level?: number
+}
+
+export type Site = BaseSite & {
   desc: string
 }
 
-export type HotSite = {
-  /**
-   * 站点名称
-   */
-  name: string
-  /**
-   * 站点链接
-   */
-  link: string
+export type HotSite = BaseSite & {
   logo: any
+}
+
+export type ATagSites = {
+  type: string
+  icon: JSX.Element
+  level?: number
+  sites: Site[]
 }
 
 export type SideBarSite = {
@@ -23,7 +26,7 @@ export type SideBarSite = {
   link?: string
 }
 
-export type searchEngines = {
+export type SearchEngines = {
   engines: {
     id: string
     name: string

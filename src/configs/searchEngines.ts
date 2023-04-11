@@ -1,6 +1,6 @@
-import { searchEngines as sEngines } from '@/types'
+import { SearchEngines } from '@/types'
 
-export const searchEngines: sEngines = {
+export const searchEngines: SearchEngines = {
   engines: [
     {
       id: '0',
@@ -30,14 +30,14 @@ export const searchEngines: sEngines = {
   currentEngine: 0
 }
 
-export function getAllSearchEngines(): sEngines {
+export function getAllSearchEngines(): SearchEngines {
   if (typeof localStorage !== 'undefined' && localStorage.getItem('searchEngines') !== null) {
     return JSON.parse(localStorage.getItem('searchEngines')!)
   }
   return searchEngines
 }
 
-export function saveAllSearchEngines(engines: sEngines) {
+export function saveAllSearchEngines(engines: SearchEngines) {
   localStorage.setItem('searchEngines', JSON.stringify(engines))
 }
 

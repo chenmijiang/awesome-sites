@@ -1,7 +1,8 @@
 import { Icon } from '@iconify-icon/react'
+import { ATagSites } from '@/types'
 
 // 热门开源项目的站点
-export const ossSites = {
+export const ossSites: ATagSites = {
   type: '开源项目站点',
   icon: (
     <Icon

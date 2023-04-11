@@ -1,6 +1,7 @@
 import { Icon } from '@iconify-icon/react'
+import { ATagSites } from '@/types'
 
-export const cssUtilSites = {
+export const cssUtilSites: ATagSites = {
   type: '工具-css',
   icon: (
     <Icon
@@ -128,7 +129,7 @@ export const cssUtilSites = {
   ]
 }
 
-export const jsUtilSites = {
+export const jsUtilSites: ATagSites = {
   type: '工具-js',
   icon: (
     <Icon
@@ -166,7 +167,7 @@ export const jsUtilSites = {
   ]
 }
 
-export const picUtilsSites = {
+export const picUtilsSites: ATagSites = {
   type: '工具-图片',
   icon: (
     <Icon
@@ -199,9 +200,15 @@ export const picUtilsSites = {
   ]
 }
 
-export const docUtilsSites = {
+export const docUtilsSites: ATagSites = {
   type: '工具-文档',
-  icon: <Icon icon="ci:file-pdf" width={26} height={26} />,
+  icon: (
+    <Icon
+      icon="ci:file-pdf"
+      width={26}
+      height={26}
+    />
+  ),
   sites: [
     {
       name: 'i Love PDF',
@@ -211,7 +218,7 @@ export const docUtilsSites = {
   ]
 }
 
-export const regexpUtilsSites = {
+export const regexpUtilsSites: ATagSites = {
   type: '工具-正则',
   icon: (
     <Icon
@@ -229,7 +236,7 @@ export const regexpUtilsSites = {
   ]
 }
 
-export const serviceUtilSites = {
+export const serviceUtilSites: ATagSites = {
   type: '工具-服务',
   icon: (
     <Icon

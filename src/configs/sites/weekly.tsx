@@ -1,10 +1,15 @@
-import { Icon } from "@iconify-icon/react"
+import { Icon } from '@iconify-icon/react'
+import { ATagSites } from '@/types'
 
 // 各类技术周刊
-export const weekly = {
+export const weekly: ATagSites = {
   type: '技术周刊',
   icon: (
-    <Icon icon="material-symbols:book" width={26} height={26} />
+    <Icon
+      icon="material-symbols:book"
+      width={26}
+      height={26}
+    />
   ),
   sites: [
     {

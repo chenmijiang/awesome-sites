@@ -1,6 +1,7 @@
 import { Icon } from '@iconify-icon/react'
+import { ATagSites } from '@/types'
 
-export const teamBlog = {
+export const teamBlog: ATagSites = {
   type: '技术团队博客',
   icon: (
     <Icon
@@ -28,7 +29,7 @@ export const teamBlog = {
   ]
 }
 
-export const blog = {
+export const blog: ATagSites = {
   type: '高质量个人博客',
   icon: (
     <Icon

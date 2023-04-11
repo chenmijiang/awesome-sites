@@ -1,6 +1,7 @@
 import { Icon } from '@iconify-icon/react'
+import { ATagSites } from '@/types'
 
-export const spec = {
+export const spec: ATagSites = {
   type: '规范',
   icon: (
     <Icon

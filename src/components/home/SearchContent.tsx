@@ -8,7 +8,7 @@ import {
   saveAllSearchEngines,
   searchEngines as ses
 } from '@/configs/searchEngines'
-import { filterSearchWord } from '@/util/filter-search'
+import { filterSearchWord } from '@/util/search.util'
 
 type Props = {
   url: string

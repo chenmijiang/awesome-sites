@@ -1,6 +1,7 @@
 import { Icon } from '@iconify-icon/react'
+import { ATagSites } from '@/types'
 
-export const techSites = {
+export const techSites: ATagSites = {
   type: '技术社区',
   icon: (
     <Icon
