@@ -12,6 +12,11 @@ export const techSites: ATagSites = {
   ),
   sites: [
     {
+      name: 'stackoverflow',
+      link: 'https://stackoverflow.com/',
+      desc: '一个面向程序员的问答社区，用户可以在这里提出问题、回答问题、评论和投票'
+    },
+    {
       name: 'dev.to',
       link: 'https://dev.to/',
       desc: '拥有百万开发者的技术社区，开发者分享交流，获取最新技术资讯，提高专业能力的好地方'

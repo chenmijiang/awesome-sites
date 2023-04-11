@@ -18,6 +18,7 @@ import next from '@/lib/images/logos/next.png'
 import ant_design from '@/lib/images/logos/ant_design.png'
 import leetcode from '@/lib/images/logos/leetcode.ico'
 import dict_code from '@/lib/images/logos/dict_code.png'
+import nuxt from '@/lib/images/logos/nuxt.png'
 
 export const hotSites: HotSite[] = [
   {
@@ -114,5 +115,10 @@ export const hotSites: HotSite[] = [
     name: 'Bun',
     link: 'https://bun.sh/docs',
     logo: bun
+  },
+  {
+    name: 'Nuxt',
+    link: 'https://nuxt.com/docs/getting-started/introduction',
+    logo: nuxt
   }
 ]
