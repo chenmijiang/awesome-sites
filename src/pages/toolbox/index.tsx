@@ -1,24 +1,14 @@
-import { Icon } from '@iconify-icon/react'
-
 import HotSites from '@/components/HotSites'
 import MainPanel from '@/components/ui/MainPanel'
 import SitesList from '@/components/home/SitesList'
+import { fixedSites } from '@/configs/fixedSites'
 import { toolboxSites } from '@/configs/toolbox.sites'
 
 const ToolboxPage = () => {
-  let sites = [
-    {
-      type: '热门站点',
-      icon: (
-        <Icon
-          icon="solar:fire-bold"
-          width={26}
-          height={26}
-        />
-      )
-    }
-  ]
-  sites.push(...toolboxSites.map((site) => ({ type: site.type, icon: site.icon })))
+  const sites = fixedSites.slice(0, 1)
+  sites.push(
+    ...toolboxSites.map((site) => ({ type: site.type, icon: site.icon, level: site.level }))
+  )
 
   return (
     <MainPanel sites={sites}>

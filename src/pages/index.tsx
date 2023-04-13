@@ -6,24 +6,13 @@ import MainPanel from '@/components/ui/MainPanel'
 // import Bulletin from '@/components/home/Bulletin'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { fetchBingImg } from '@/util/fetch-bing-image'
-import { Icon } from '@iconify-icon/react'
 import { homeSites } from '@/configs/home.sites'
+import { fixedSites } from '@/configs/fixedSites'
 import SitesList from '@/components/home/SitesList'
 
 export default function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
-  let sites = [
-    {
-      type: '热门站点',
-      icon: (
-        <Icon
-          icon="solar:fire-bold"
-          width={26}
-          height={26}
-        />
-      )
-    }
-  ]
-  sites.push(...homeSites.map((site) => ({ type: site.type, icon: site.icon })))
+  const sites = [...fixedSites]
+  sites.push(...homeSites.map((site) => ({ type: site.type, icon: site.icon, level: site.level })))
 
   return (
     <MainPanel sites={sites}>

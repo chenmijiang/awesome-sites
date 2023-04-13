@@ -57,14 +57,14 @@ const Header = (props: Props) => {
                 id="menu-item-28"
                 className="h-full flex justify-center items-center mr-4">
                 <Link
-                  href="/toolbox"
+                  href="/ai"
                   className="flex items-center hover:no-underline transition-color">
                   <Icon
-                    icon="mingcute:tool-line"
-                    width={24}
-                    height={24}
+                    icon="logos:airbnb-icon"
+                    width={20}
+                    height={20}
                   />
-                  <span className="ml-1 text-lg md:inline hidden">工具</span>
+                  <span className="ml-1 text-lg md:inline hidden">AI</span>
                 </Link>
               </li>
             </ul>
