@@ -19,8 +19,14 @@ import ant_design from '@/lib/images/logos/ant_design.png'
 import leetcode from '@/lib/images/logos/leetcode.ico'
 import dict_code from '@/lib/images/logos/dict_code.png'
 import nuxt from '@/lib/images/logos/nuxt.png'
+import phind from '@/lib/images/logos/phind.png'
 
 export const hotSites: HotSite[] = [
+  {
+    name: 'phind',
+    link: 'https://www.phind.com/',
+    logo: phind
+  },
   {
     name: 'ChatGPT 中文版',
     link: 'https://gpt1.moyunav.com',
