@@ -70,7 +70,7 @@ const About = () => {
             </a>
           </p>
         </div>
-        <div className="pt-[30px] flex justify-center">
+        <div className="py-[30px] flex justify-center">
           <Link
             href="/"
             className="hover:top-[2px] hover:bg-[#333] hover:shadow-none hover:transition-all !text-white relative top-0 p-[10px_75px] bg-[#f1404b] font-semibold rounded-[900px] transition-all shadow-[0px_5px_20px_-3px_rgba(249,100,90,0.6)]">

@@ -4,6 +4,7 @@ import { Icon } from '@iconify-icon/react'
 
 type Props = {
   isToggleShow: () => void
+  isToggleMShow: () => void
   show: boolean
 }
 
@@ -25,13 +26,15 @@ const Header = (props: Props) => {
               </span>
             </div>
             {/* 移动端侧边栏开关按钮 */}
-            <div className="header-mini-btn py-2 mr-8 hidden">
-              <span className="cursor-pointer h-full flex items-center">
-                {/* <Icon
+            <div className="header-mini-btn py-2 mr-4 md:hidden block">
+              <span
+                className="cursor-pointer h-full flex items-center"
+                onClick={props.isToggleMShow}>
+                <Icon
                   icon="charm:menu-hamburger"
                   width={28}
                   height={28}
-                /> */}
+                />
               </span>
             </div>
             {/* 跳转链接：首页、tools */}
@@ -47,7 +50,7 @@ const Header = (props: Props) => {
                     width={24}
                     height={24}
                   />
-                  <span className="ml-1 text-lg">首页</span>
+                  <span className="ml-1 text-lg md:inline hidden">首页</span>
                 </Link>
               </li>
               <li
@@ -61,7 +64,7 @@ const Header = (props: Props) => {
                     width={24}
                     height={24}
                   />
-                  <span className="ml-1 text-lg">工具</span>
+                  <span className="ml-1 text-lg md:inline hidden">工具</span>
                 </Link>
               </li>
             </ul>
