@@ -4,6 +4,7 @@ import { picUtilsSites } from './picUtilsSites'
 import { docUtilsSites } from './docUtilsSites'
 import { regexpUtilsSites } from './regexpUtilsSites'
 import { serviceUtilSites } from './serviceUtilSites'
+import { aiUtilSites } from './aiUtilSites'
 
 // 导出所有的工具站点
 export {
@@ -12,5 +13,6 @@ export {
   picUtilsSites,
   docUtilsSites,
   regexpUtilsSites,
-  serviceUtilSites
+  serviceUtilSites,
+  aiUtilSites
 }

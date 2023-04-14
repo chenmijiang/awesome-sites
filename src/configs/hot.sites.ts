@@ -28,7 +28,7 @@ export const hotSites: HotSite[] = [
     logo: phind
   },
   {
-    name: 'ChatGPT 中文版',
+    name: 'ChatGPT-镜像',
     link: 'https://gpt1.moyunav.com',
     logo: chatgpt_cn
   },

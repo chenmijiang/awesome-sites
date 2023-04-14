@@ -13,20 +13,7 @@ export const fixedSites: SideBarSite[] = [
         height={26}
       />
     ),
-    level: 2
-  },
-  {
-    type: '工具箱',
-    icon: (
-      <Icon
-        icon="mingcute:tool-line"
-        width={26}
-        height={26}
-      />
-    ),
-    level: -1,
-    anchor: false,
-    link: '/toolbox'
+    level: 10
   }
 ]
 
