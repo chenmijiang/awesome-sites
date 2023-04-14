@@ -28,7 +28,7 @@ const MobileSidebar = (props: Props) => {
               {sortSites.map((list, index) => {
                 return (
                   <li
-                    className="sidebar-item leading-10 ml-3 my-2"
+                    className="sidebar-item leading-10 ml-4 my-2"
                     title={list.type}
                     key={index}>
                     <MixedLink
