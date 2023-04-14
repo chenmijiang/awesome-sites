@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import HotSites from '@/components/HotSites'
 import MainPanel from '@/components/ui/MainPanel'
 import SitesList from '@/components/home/SitesList'
@@ -11,12 +12,17 @@ const ToolboxPage = () => {
   )
 
   return (
-    <MainPanel sites={sites}>
-      {/* 热门站点 */}
-      <HotSites></HotSites>
-      {/* 站点列表 */}
-      <SitesList sites={toolboxSites} />
-    </MainPanel>
+    <>
+      <Head>
+        <title>工具箱 | 前端森林</title>
+      </Head>
+      <MainPanel sites={sites}>
+        {/* 热门站点 */}
+        <HotSites></HotSites>
+        {/* 站点列表 */}
+        <SitesList sites={toolboxSites} />
+      </MainPanel>
+    </>
   )
 }
 

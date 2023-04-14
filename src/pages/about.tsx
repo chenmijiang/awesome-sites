@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>关于</title>
+        <title>关于 | 前端森林</title>
       </Head>
       <AboutWrapper className="w-full">
         <div className="md:w-[750px] w-11/12 py-5 mx-auto box-border">

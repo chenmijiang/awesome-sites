@@ -3,6 +3,7 @@ import ATagSitesList from '@/components/home/ATagSitesList'
 import MainPanel from '@/components/ui/MainPanel'
 
 import { allSites } from '@/configs/all.sites'
+import Head from 'next/head'
 
 const TagPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const sites = allSites.filter((site) => site.type === props.type)
@@ -11,9 +12,14 @@ const TagPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   }
 
   return (
-    <MainPanel sites={sites}>
-      <ATagSitesList sites={sites} />
-    </MainPanel>
+    <>
+      <Head>
+        <title>{sites[0].type} | 前端森林</title>
+      </Head>
+      <MainPanel sites={sites}>
+        <ATagSitesList sites={sites} />
+      </MainPanel>
+    </>
   )
 }
 

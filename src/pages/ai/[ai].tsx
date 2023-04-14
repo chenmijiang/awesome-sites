@@ -6,16 +6,22 @@ import { aiSites } from '@/configs/ai.sites'
 
 import MainPanel from '@/components/ui/MainPanel'
 import IframePanel from '@/components/ui/IframePanel'
+import Head from 'next/head'
 
 const AIPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <MainPanel
-      sites={aiSites}
-      footer={false}>
-      <AIPageWrapper>
-        <IframePanel url={props.url} />
-      </AIPageWrapper>
-    </MainPanel>
+    <>
+      <Head>
+        <title>AI | 前端森林</title>
+      </Head>
+      <MainPanel
+        sites={aiSites}
+        footer={false}>
+        <AIPageWrapper>
+          <IframePanel url={props.url} />
+        </AIPageWrapper>
+      </MainPanel>
+    </>
   )
 }
 
