@@ -29,3 +29,17 @@ export const fixedSites: SideBarSite[] = [
     link: '/toolbox'
   }
 ]
+
+export const toolBox: SideBarSite = {
+  type: '工具箱',
+  icon: (
+    <Icon
+      icon="mingcute:tool-line"
+      width={26}
+      height={26}
+    />
+  ),
+  level: -1,
+  anchor: false,
+  link: '/toolbox'
+}

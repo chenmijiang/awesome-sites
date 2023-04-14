@@ -5,24 +5,24 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
-  // rewrites: async () => {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '/home'
-  //     }
-  //   ]
-  // },
+  rewrites: async () => {
+    return [
+      {
+        source: '/ai',
+        destination: '/ai/aHR0cHM6Ly93d3cucGhpbmQuY29tLw=='
+      }
+    ]
+  },
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'cn.bing.com',
         port: '',
-        pathname: '/th',
-      },
-    ],
-  },
+        pathname: '/th'
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig

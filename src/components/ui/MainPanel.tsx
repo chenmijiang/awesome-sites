@@ -22,6 +22,7 @@ const MainPanel = (props: {
     | null
     | undefined
   sites: SideBarSite[]
+  footer?: boolean
 }) => {
   const { state, dispatch } = useContext(AppContext)
   const [mSidebarShow, setMSidebarShow] = useState(false)
@@ -39,9 +40,9 @@ const MainPanel = (props: {
   return (
     <LayoutWrapper>
       <div
-        className={`sidebar flex flex-row-reverse w-full h-full${state.sideBarShow ? '' : ' mini-sidebar'}${
-          mSidebarShow ? ' m-sidebar' : ''
-        }`}
+        className={`sidebar flex flex-row-reverse w-full h-full${
+          state.sideBarShow ? '' : ' mini-sidebar'
+        }${mSidebarShow ? ' m-sidebar' : ''}`}
         onClick={() => {
           if (mSidebarShow) {
             setMSidebarShow(false)
@@ -51,7 +52,7 @@ const MainPanel = (props: {
         <Sidebar sites={props.sites} />
         {/* 移动侧边栏 */}
         <MobileSidebar sites={props.sites} />
-        <div className="main px-2 md:ml-[60px] ml-0 relative">
+        <div className="main px-2 md:ml-[60px] ml-0 relative w-full">
           {/* 导航 */}
           <Header
             isToggleShow={isToggleShow}
@@ -61,7 +62,7 @@ const MainPanel = (props: {
           {/* 滚动状态 */}
           <div className="mt-[80px] flex-1">{props.children}</div>
           {/* 脚部 */}
-          <Footer />
+          {props.footer !== false && <Footer />}
         </div>
       </div>
     </LayoutWrapper>
@@ -109,7 +110,8 @@ const LayoutWrapper = styled.div.attrs({
 
   @media (max-width: 768px) {
     .sidebar::before {
-      transition: all 0.3s;
+      transition: opacity 0.3s;
+      opacity: 0;
     }
     .m-sidebar {
       &::before {
@@ -120,6 +122,7 @@ const LayoutWrapper = styled.div.attrs({
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
+        opacity: 1;
         z-index: 5;
       }
       #m-sidebar {
