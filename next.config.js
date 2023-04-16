@@ -5,14 +5,14 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
-  rewrites: async () => {
-    return [
-      {
-        source: '/ai',
-        destination: '/ai/aHR0cHM6Ly93d3cucGhpbmQuY29tLw=='
-      }
-    ]
-  },
+  // rewrites: async () => {
+  //   return [
+  //     {
+  //       source: '/ai',
+  //       destination: '/ai/aHR0cHM6Ly93d3cucGhpbmQuY29tLw=='
+  //     }
+  //   ]
+  // },
   images: {
     remotePatterns: [
       {

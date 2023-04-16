@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next/types'
 
-const bingUrl = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN'
+const bingUrl = process.env.BING_IMAGE!
 
 const getBingImg = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
@@ -15,7 +15,7 @@ const getBingImg = async (req: NextApiRequest, res: NextApiResponse) => {
       return
     }
   }
-  res.status(405).json({ message: ' 405 - Method Not Allowed' })
+  res.status(405).json({ message: '405 - Method Not Allowed' })
 }
 
 export default getBingImg
