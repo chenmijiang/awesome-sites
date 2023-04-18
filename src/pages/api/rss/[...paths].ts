@@ -16,8 +16,6 @@ const getRSSResource = async (req: NextApiRequest, res: NextApiResponse) => {
       const data = await response.text()
 
       res.setHeader('Content-Type', 'application/xml; charset=utf-8')
-      res.setHeader('Access-Control-Allow-Origin', '*')
-      res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
 
       res.status(200).send(data)
       return
