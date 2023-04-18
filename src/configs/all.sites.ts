@@ -11,7 +11,9 @@ import {
   regexpUtilsSites,
   serviceUtilSites,
   docUtilsSites,
-  aiUtilSites
+  aiUtilSites,
+  otherUtilSites,
+  codeUtilSites
 } from './sites/utilSites'
 
 export const allSites = [
@@ -33,5 +35,7 @@ export const allSites = [
   docUtilsSites,
   regexpUtilsSites,
   serviceUtilSites,
-  aiUtilSites
+  aiUtilSites,
+  otherUtilSites,
+  codeUtilSites
 ]

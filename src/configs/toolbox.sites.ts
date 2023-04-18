@@ -5,7 +5,9 @@ import {
   regexpUtilsSites,
   serviceUtilSites,
   docUtilsSites,
-  aiUtilSites
+  aiUtilSites,
+  otherUtilSites,
+  codeUtilSites
 } from './sites/utilSites'
 
 export const toolboxSites = [
@@ -16,5 +18,7 @@ export const toolboxSites = [
   docUtilsSites,
   regexpUtilsSites,
   serviceUtilSites,
-  aiUtilSites
+  aiUtilSites,
+  otherUtilSites,
+  codeUtilSites
 ]
