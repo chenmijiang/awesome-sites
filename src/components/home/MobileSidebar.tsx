@@ -23,7 +23,7 @@ const MobileSidebar = (props: Props) => {
         <div className="sidebar-menu flex-1">
           <ScrollPanel
             className="sidebar-scroll h-full"
-            style={{ height: 'calc(100vh - 120px)', outline: 'none' }}>
+            style={{ height: 'calc(100vh - 150px)', outline: 'none' }}>
             <ul>
               {sortSites.map((list, index) => {
                 return (
