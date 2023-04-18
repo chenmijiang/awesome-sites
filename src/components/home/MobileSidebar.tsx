@@ -62,7 +62,22 @@ const MobileSidebar = (props: Props) => {
         {/* sidebar-bottom */}
         <div className="py-2">
           <ul>
-            <li className="flex justify-center items-center">
+            <li className="flex justify-center items-center my-2">
+              <MixedLink
+                to="/doc"
+                anchor={false}
+                className="flex items-center justify-center hover:no-underline w-full">
+                <Icon
+                  icon="gg:readme"
+                  width={24}
+                  height={24}
+                />
+                <span className="logo-detail leading-7 ml-2 whitespace-nowrap text-ellipsis overflow-hidden">
+                  接口文档
+                </span>
+              </MixedLink>
+            </li>
+            <li className="flex justify-center items-center my-2">
               <MixedLink
                 to="/about"
                 anchor={false}

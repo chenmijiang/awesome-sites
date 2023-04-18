@@ -39,7 +39,7 @@ const Sidebar = (props: Props) => {
         <div className="sidebar-menu flex-1">
           <ScrollPanel
             className="sidebar-scroll h-full"
-            style={{ height: 'calc(100vh - 120px)', outline: 'none' }}>
+            style={{ height: 'calc(100vh - 150px)', outline: 'none' }}>
             <ul>
               {sortSites.map((list, index) => {
                 return (
@@ -78,7 +78,22 @@ const Sidebar = (props: Props) => {
         {/* sidebar-bottom */}
         <div className="py-2">
           <ul>
-            <li className="flex justify-center items-center">
+            <li className="flex justify-center items-center my-2">
+              <MixedLink
+                to="/doc"
+                anchor={false}
+                className="flex items-center justify-center hover:no-underline w-full">
+                <Icon
+                  icon="gg:readme"
+                  width={24}
+                  height={24}
+                />
+                <span className="logo-detail lg:block hidden leading-7 ml-2 whitespace-nowrap text-ellipsis overflow-hidden">
+                  接口文档
+                </span>
+              </MixedLink>
+            </li>
+            <li className="flex justify-center items-center my-2">
               <MixedLink
                 to="/about"
                 anchor={false}
