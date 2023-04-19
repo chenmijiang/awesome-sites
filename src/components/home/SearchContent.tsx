@@ -57,8 +57,8 @@ const SearchContent = ({ url }: Props) => {
           className={`searchbox${
             focusActive
               ? ' bg-zinc-200 md:w-[670px] text-cus-normal'
-              : ' bg-zinc-200/50 md:w-[470px] text-transparent md:hover:w-[670px]'
-          } w-[80vw] h-[46px] transition-all delay-75 relative px-4 box-border  rounded-3xl`}
+              : ' bg-zinc-200/50 md:w-[470px] text-transparent'
+          } w-[80vw] h-[46px] transition-all delay-75 relative px-4 box-border  rounded-3xl md:hover:w-[670px]`}
           onClick={(e) => e.stopPropagation()}>
           {/* 搜索框 */}
           <SearchInput
@@ -82,9 +82,9 @@ const SearchContent = ({ url }: Props) => {
             placeholder={searchEngines.engines[searchEngines.currentEngine].hint}
           />
           {/* 引擎切换 */}
-          <div className="absolute left-[20px] -top-3/4 h-[30px] overflow-y-hidden items-center transition delay-200">
+          <div className="absolute left-[20px] -top-3/4 h-[30px] overflow-y-hidden items-center transition delay-200 pointer-events-none">
             <div
-              className={`flex  transition ${
+              className={`flex  transition pointer-events-auto ${
                 focusActive ? 'translate-y-0' : 'translate-y-[120%]'
               }`}>
               <div className="add-engines flex items-center">
