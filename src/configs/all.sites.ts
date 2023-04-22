@@ -13,7 +13,8 @@ import {
   docUtilsSites,
   aiUtilSites,
   otherUtilSites,
-  codeUtilSites
+  codeUtilSites,
+  designUtilSites
 } from './sites/utilSites'
 
 export const allSites = [
@@ -37,5 +38,6 @@ export const allSites = [
   serviceUtilSites,
   aiUtilSites,
   otherUtilSites,
-  codeUtilSites
+  codeUtilSites,
+  designUtilSites
 ]

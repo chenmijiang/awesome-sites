@@ -26,6 +26,16 @@ export const ossSites: ATagSites = {
       name: '编程词典',
       link: 'http://dict.code-nav.cn/',
       desc: '计算机编程领域专业术语大全'
+    },
+    {
+      name: '现代 JavaScript 教程',
+      link: 'https://zh.javascript.info/',
+      desc: '现代 JavaScript 教程：有关示例和任务的简单但详细的解释包括：闭包、文档和事件，以及面向对象编程等。'
+    },
+    {
+      name: 'TypeScript 使用指南手册',
+      link: 'http://www.patrickzhong.com/TypeScript/',
+      desc: 'TypeScript Handbook 中文翻译。'
     }
   ]
 }

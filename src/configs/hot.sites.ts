@@ -20,6 +20,7 @@ import leetcode from '@/lib/images/logos/leetcode.ico'
 import dict_code from '@/lib/images/logos/dict_code.png'
 import nuxt from '@/lib/images/logos/nuxt.png'
 import phind from '@/lib/images/logos/phind.png'
+import prisma from '@/lib/images/logos/prisma.png'
 
 export const hotSites: HotSite[] = [
   {
@@ -41,6 +42,11 @@ export const hotSites: HotSite[] = [
     name: '编程字典',
     link: 'http://dict.code-nav.cn/',
     logo: dict_code
+  },
+  {
+    name: 'Prisma',
+    link: 'https://www.prisma.io/docs/getting-started',
+    logo: prisma
   },
   {
     name: 'React',

@@ -7,7 +7,8 @@ import {
   docUtilsSites,
   aiUtilSites,
   otherUtilSites,
-  codeUtilSites
+  codeUtilSites,
+  designUtilSites
 } from './sites/utilSites'
 
 export const toolboxSites = [
@@ -20,5 +21,6 @@ export const toolboxSites = [
   serviceUtilSites,
   aiUtilSites,
   otherUtilSites,
-  codeUtilSites
+  codeUtilSites,
+  designUtilSites
 ]

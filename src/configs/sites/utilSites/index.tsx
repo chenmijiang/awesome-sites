@@ -6,7 +6,8 @@ import { regexpUtilsSites } from './regexpUtilsSites'
 import { serviceUtilSites } from './serviceUtilSites'
 import { aiUtilSites } from './aiUtilSites'
 import { otherUtilSites } from './otherUtilSites'
-import {codeUtilSites} from './codeUtilSites'
+import { codeUtilSites } from './codeUtilSites'
+import {designUtilSites} from './designUtilSites'
 
 // 导出所有的工具站点
 export {
@@ -18,5 +19,6 @@ export {
   serviceUtilSites,
   aiUtilSites,
   otherUtilSites,
-  codeUtilSites
+  codeUtilSites,
+  designUtilSites
 }
