@@ -31,15 +31,20 @@ export const serviceUtilSites: ATagSites = {
       link: 'https://caniuse.com/',
       desc: '浏览器兼容性'
     },
-    {
-      name: 'component-party',
-      link: 'https://component-party.lainbo.com/',
-      desc: '前端框架语法比较'
-    },
+    // {
+    //   name: 'component-party',
+    //   link: 'https://component-party.lainbo.com/',
+    //   desc: '前端框架语法比较'
+    // },
     {
       name: 'Node Toolbox',
       link: 'https://nodejstoolbox.com/',
       desc: '查找Node生态下各分类最流行的代码库'
+    },
+    {
+      name: 'IP/IPv6查询',
+      link: 'https://ip.tool.chinaz.com/',
+      desc: '快速查询用户的IP和浏览器、操作系统。可以批量查询IP地址所在地，可以解析域名的多个IP地址。已完美支持IPv6查询。'
     }
   ]
 }
