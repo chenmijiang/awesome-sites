@@ -2,6 +2,8 @@
 
 .env
 
+logs
+
 # dependencies
 /node_modules
 /.pnp

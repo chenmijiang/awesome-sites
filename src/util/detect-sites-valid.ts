@@ -6,7 +6,18 @@ import { URL } from 'url'
 
 import { allSites } from '@/configs/all.sites'
 
+import { readdirSync, mkdirSync, writeFileSync } from 'fs'
+
+const logDir = process.cwd() + '/logs'
+
 export const detectSitesValid = async (callback?: Function) => {
+  // logs文件夹 是否存在，不存在就创建
+  if (!readdirSync(logDir)) {
+    mkdirSync(logDir)
+  }
+
+  const logFileName = `${Date.now()}.log`
+
   // 遍历 allSites 数组，获取所有网站的链接
   const sites: { name: string; url: string }[] = []
   allSites.forEach((aTagSites) => {
@@ -39,11 +50,19 @@ export const detectSitesValid = async (callback?: Function) => {
           },
           (res) => {
             const { statusCode, statusMessage } = res
+            writeFileSync(
+              `${logDir}/${logFileName}`,
+              `${name}, ${url}, ${statusCode || 200}, ${statusMessage || 'OK'}\n`,
+              { flag: 'a' }
+            )
             fetchResults.push(`${name}, ${url}, ${statusCode || 200}, ${statusMessage || 'OK'}`)
             resolve('ok')
           }
         ).on('error', (err) => {
           const { message } = err
+          writeFileSync(`${logDir}/${logFileName}`, `${name}, ${url}, ${0}, ${message}\n`, {
+            flag: 'a'
+          })
           fetchResults.push(`${name}, ${url}, ${0}, ${message}`)
           resolve('error')
         })
