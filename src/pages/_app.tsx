@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
+import { Analytics } from '@vercel/analytics/react'
 
 import '@/styles/globals.css'
 import '@/styles/font-awesome.min.css'
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <AppProvider>
         <Component {...pageProps} />
       </AppProvider>
+      <Analytics />
     </>
   )
 }
