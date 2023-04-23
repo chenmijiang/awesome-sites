@@ -17,7 +17,7 @@ export const designUtilSites: ATagSites = {
     {
       name: 'figma',
       link: 'https://www.figma.com/',
-      desc: '作为一个团队打造更好的产品。设计，原型和收集反馈都在一个地方---Figma。'
+      desc: '作为一个团队构建更好的产品。 使用 Figma 在一个地方进行设计、原型设计和收集反馈。'
     },
     {
       name: 'framer',
@@ -27,7 +27,7 @@ export const designUtilSites: ATagSites = {
     {
       name: 'pixso',
       link: 'https://pixso.cn/',
-      desc: '作为一个团队构建更好的产品。 使用 Figma 在一个地方进行设计、原型设计和收集反馈。'
+      desc: '产品设计一体化工具 一站式完成白板、原型、设计、交付和管理，把产品设计得更美好'
     }
   ]
 }
