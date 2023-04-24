@@ -17,11 +17,11 @@
   --column-width: 42rem;
   --column-margin-top: 4rem;
   --page-image: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(255, 255, 255, 0.75) 0%,
-    rgba(255, 255, 255, 0) 100%
-  ),
-  linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.75) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
   font-family: var(--font-body);
   color: var(--color-text);
 }
@@ -133,4 +133,19 @@ button:focus:not(:focus-visible) {
 
 .simplebar-track {
   width: 8px !important;
+}
+
+/* dark theme */
+
+.dark {
+  filter: invert(1) hue-rotate(180deg);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.dark img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.dark .m-sidebar::before {
+  background: rgba(255, 255, 255, 0.5) !important;
 }

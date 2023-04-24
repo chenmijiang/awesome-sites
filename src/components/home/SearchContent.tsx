@@ -49,7 +49,7 @@ const SearchContent = ({ url }: Props) => {
         src={url}
         alt={''}
         fill={true}
-        className={`object-cover transition${focusActive ? ' blur scale-110 brightness-75' : ''}`}
+        className={`object-cover transition-transform ${focusActive ? 'blur scale-110 brightness-75 dark:blur dark:scale-110 dark:brightness-75 dark:invert dark:hue-rotate-180' : ''}`}
       />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         {/* 输入框 */}
@@ -58,7 +58,7 @@ const SearchContent = ({ url }: Props) => {
             focusActive
               ? ' bg-zinc-200 md:w-[670px] text-cus-normal'
               : ' bg-zinc-200/50 md:w-[470px] text-transparent'
-          } w-[80vw] h-[46px] transition-all delay-75 relative px-4 box-border  rounded-3xl md:hover:w-[670px]`}
+          } w-[80vw] h-[46px] transition-all delay-75 relative px-4 box-border rounded-3xl md:hover:w-[670px]`}
           onClick={(e) => e.stopPropagation()}>
           {/* 搜索框 */}
           <SearchInput
@@ -88,17 +88,17 @@ const SearchContent = ({ url }: Props) => {
                 focusActive ? 'translate-y-0' : 'translate-y-[120%]'
               }`}>
               <div className="add-engines flex items-center">
-                <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
-                <div className="w-1 h-1 bg-gray-300 rounded-full mx-1"></div>
-                <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+                <div className="w-1 h-1 bg-gray-300 dark:bg-zinc-700 rounded-full"></div>
+                <div className="w-1 h-1 bg-gray-300 dark:bg-zinc-700 rounded-full mx-1"></div>
+                <div className="w-1 h-1 bg-gray-300 dark:bg-zinc-700 rounded-full"></div>
               </div>
               {searchEngines.engines.map((item) => (
                 <div
                   key={item.id}
                   className={`ml-2 cursor-pointer ${
                     searchEngines.currentEngine === +item.id
-                      ? 'text-white font-semibold'
-                      : 'text-white/50'
+                      ? 'text-white dark:text-black font-semibold'
+                      : 'text-white/50 dark:text-black/50'
                   }`}
                   onClick={() => {
                     searchRef.current?.focus()

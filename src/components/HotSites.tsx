@@ -27,7 +27,7 @@ const HotSites = () => {
             key={index}
             href={site.link}
             target="_blank"
-            className="flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 py-2 px-4 bg-white shadow-sm text-cus-normal hover:text-cus-activated hover:shadow-md hover:-translate-y-1 transition duration-300">
+            className="dark:bg-zinc-300 dark:shadow-none flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 py-2 px-4 bg-white shadow-sm text-cus-normal hover:text-cus-activated hover:shadow-md hover:-translate-y-1 transition-transform duration-300">
             {site.logo && (
               <Image
                 src={site.logo}

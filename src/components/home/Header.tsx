@@ -9,6 +9,17 @@ type Props = {
 }
 
 const Header = (props: Props) => {
+  const handleThemeChange = () => {
+    const theme = localStorage.getItem('theme')
+    if (theme === 'dark') {
+      localStorage.setItem('theme', 'light')
+      document.documentElement.classList.remove('dark')
+    } else {
+      localStorage.setItem('theme', 'dark')
+      document.documentElement.classList.add('dark')
+    }
+  }
+
   return (
     <div className="main-head fixed w-full top-0 left-0 md:pl-[60px] pl-0 z-10 transition-width">
       <div className="head-bg w-full h-[50px] backdrop-blur transition-colors duration-500 bg-white/70 supports-backdrop-blur:bg-white/60">
@@ -69,9 +80,28 @@ const Header = (props: Props) => {
               </li>
             </ul>
           </div>
-          <ul className="nav navbar-menu text-xs order-1 order-md-2 position-relative">
+          <ul className="nav navbar-menu text-xs order-1 order-md-2 position-relative flex">
+            {/* 主题切换 */}
+            <li className="nav-login ml-3">
+              <label
+                htmlFor="theme_toggle"
+                className="flex relative transition-all cursor-pointer pt-[1px]">
+                <input
+                  type="checkbox"
+                  id="theme_toggle"
+                  className="absolute w-0 h-0 opacity-0"
+                  onChange={handleThemeChange}
+                />
+                <Icon
+                  icon="fluent:dark-theme-20-filled"
+                  width={26}
+                  height={26}
+                  className="dark:rotate-180 dark:transition-transform duration-500"
+                />
+              </label>
+            </li>
             {/* 项目地址 */}
-            <li className="nav-login ml-3 ml-md-4">
+            <li className="nav-login ml-3">
               <a
                 className="w-full h-full flex justify-center items-center"
                 href="https://github.com/chenmijiang/awesome-sites"

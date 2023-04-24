@@ -16,7 +16,7 @@ const Card = ({ site }: Props) => {
     <CardContainer
       href={link}
       target="_blank"
-      className="w-full text-center min-h-[50px] rounded-md bg-white cursor-pointer shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+      className="w-full text-center min-h-[50px] rounded-md bg-white dark:bg-zinc-300 dark:shadow-none cursor-pointer shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
       <div className="leading-[50px] text-cus-normal text-[18px] h-[50px] lh-[50px] border-b-[1px] border-solid border-b-[#e9e9e9]">
         <span>{name}</span>
       </div>

@@ -5,6 +5,8 @@ import { Analytics } from '@vercel/analytics/react'
 import '@/styles/globals.css'
 import '@/styles/font-awesome.min.css'
 
+import '@/util/conflict-data'
+
 import { AppProvider } from '@/store'
 
 export default function App({ Component, pageProps }: AppProps) {
