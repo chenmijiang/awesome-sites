@@ -31,11 +31,11 @@ export const serviceUtilSites: ATagSites = {
       link: 'https://caniuse.com/',
       desc: '浏览器兼容性'
     },
-    // {
-    //   name: 'component-party',
-    //   link: 'https://component-party.lainbo.com/',
-    //   desc: '前端框架语法比较'
-    // },
+    {
+      name: 'component-party',
+      link: 'https://component-party.dev/',
+      desc: '前端框架语法比较'
+    },
     {
       name: 'Node Toolbox',
       link: 'https://nodejstoolbox.com/',

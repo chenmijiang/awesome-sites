@@ -39,8 +39,14 @@ export const detectSitesValid = async (callback?: Function) => {
     const { name, url } = site
     const { protocol } = new URL(url)
     const request = protocol === 'https:' ? get : getHttp
+
     fetchRequests.push(
       new Promise((resolve, reject) => {
+        // 处理超时请求
+        const timeoutId = setTimeout(() => {
+          reject(new Error(`${name}, ${url}, ${0}, ${'timeout'}`))
+        }, 30000)
+
         request(
           {
             hostname: new URL(url).hostname,
@@ -49,6 +55,7 @@ export const detectSitesValid = async (callback?: Function) => {
             timeout: 30000
           },
           (res) => {
+            clearTimeout(timeoutId)
             const { statusCode, statusMessage } = res
             writeFileSync(
               `${logDir}/${logFileName}`,
@@ -59,6 +66,7 @@ export const detectSitesValid = async (callback?: Function) => {
             resolve('ok')
           }
         ).on('error', (err) => {
+          clearTimeout(timeoutId)
           const { message } = err
           writeFileSync(`${logDir}/${logFileName}`, `${name}, ${url}, ${0}, ${message}\n`, {
             flag: 'a'
