@@ -59,8 +59,9 @@ const MainPanel = (props: {
             isToggleMShow={isMSidebarShow}
             show={state.sideBarShow}
           />
+          <div className='w-full h-[80px]'></div>
           {/* 滚动状态 */}
-          <div className="mt-[80px] flex-1">{props.children}</div>
+          <div className="flex-1">{props.children}</div>
           {/* 脚部 */}
           {props.footer !== false && <Footer />}
         </div>
