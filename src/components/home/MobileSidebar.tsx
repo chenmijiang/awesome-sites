@@ -3,7 +3,7 @@ import { Icon } from '@iconify-icon/react'
 import MixedLink from '@/components/MixedLink'
 import ScrollPanel from '@/components/ui/ScrollPanel'
 import { SideBarSite } from '@/types'
-import { sortSitesByLevel } from '@/util/sites.util'
+import { sortSitesByLevel } from '@/util/sites-sort'
 
 type Props = {
   sites: SideBarSite[]

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Card from './Card'
 import CategoryTitle from './CategoryTitle'
 import { ATagSites } from '@/types'
-import { sortATagSitesByLevel } from '@/util/sites.util'
+import { sortATagSitesByLevel } from '@/util/sites-sort'
 
 type Props = {
   sites: ATagSites[]

@@ -1,7 +1,7 @@
 import Card from './Card'
 import CategoryTitle from './CategoryTitle'
 import { ATagSites } from '@/types'
-import { sortSitesByLevel } from '@/util/sites.util'
+import { sortSitesByLevel } from '@/util/sites-sort'
 
 type Props = {
   sites: ATagSites[]
