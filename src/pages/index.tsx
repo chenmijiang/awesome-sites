@@ -10,6 +10,7 @@ import { fetchBingImg } from '@/util/fetch-bing-image'
 import { homeSites } from '@/configs/home.sites'
 import { fixedSites } from '@/configs/fixedSites'
 import SitesList from '@/components/home/SitesList'
+import StackSites from '@/components/home/StackSites'
 
 export default function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
   const sites = [...fixedSites]
@@ -29,6 +30,8 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
         {/* <CustomSites></CustomSites> */}
         {/* 热门站点 */}
         <HotSites></HotSites>
+        {/* 技术栈 */}
+        <StackSites></StackSites>
         {/* 站点列表 */}
         <SitesList sites={homeSites} />
       </MainPanel>

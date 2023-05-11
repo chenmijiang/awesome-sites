@@ -12,6 +12,14 @@ export type HotSite = BaseSite & {
   logo: any
 }
 
+export type StackSite = HotSite
+
+export type StackCard = {
+  name: string
+  level?: number
+  sites: StackSite[]
+}
+
 export type ATagSites = {
   type: string
   icon: JSX.Element

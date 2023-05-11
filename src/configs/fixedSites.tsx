@@ -14,6 +14,16 @@ export const fixedSites: SideBarSite[] = [
       />
     ),
     level: 10
+  },
+  {
+    type: '技术栈',
+    icon: (
+      <Icon
+        icon="ion:file-tray-stacked"
+        width={26}
+        height={26}
+      />
+    )
   }
 ]
 
