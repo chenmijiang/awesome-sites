@@ -21,7 +21,7 @@ const HotSites = () => {
           热门站点
         </h2>
       </div>
-      <div className="flex flex-wrap my-[20px] gap-4">
+      <div className="flex flex-wrap my-[20px]">
         {sortHotSites.map((site, index) => (
           <HotSiteLink
             key={index}

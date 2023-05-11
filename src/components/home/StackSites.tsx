@@ -12,8 +12,8 @@ const StackSites = () => {
       <div className="flex items-center mb-[10px] text-[#5497b8]">
         <Icon
           icon="ion:file-tray-stacked"
-          width={24}
-          height={24}
+          width={22}
+          height={22}
         />
         <h2
           className="text-lg font-bold mt-1 ml-1"

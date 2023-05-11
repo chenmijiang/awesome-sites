@@ -4,18 +4,12 @@ import { logoPath } from '@/util/link.util'
 
 export const stackSites: StackCard[] = [
   {
-    name: '框架',
-    level: 1,
+    name: '前端框架/库',
     sites: [
       {
         name: 'React',
         link: 'https://react.dev',
         logo: logoPath('react.png')
-      },
-      {
-        name: 'Solid',
-        link: 'https://www.solidjs.com/',
-        logo: logoPath('solid.png')
       },
       {
         name: 'Vue',
@@ -28,6 +22,11 @@ export const stackSites: StackCard[] = [
         logo: logoPath('svelte.png')
       },
       {
+        name: 'Solid',
+        link: 'https://www.solidjs.com/',
+        logo: logoPath('solid.png')
+      },
+      {
         name: 'Qwik',
         link: 'https://qwik.builder.io/docs/overview/',
         logo: logoPath('qwik.png')
@@ -35,7 +34,7 @@ export const stackSites: StackCard[] = [
     ]
   },
   {
-    name: '组件库',
+    name: 'UI组件库',
     sites: [
       {
         name: 'Ant Design',
@@ -63,14 +62,19 @@ export const stackSites: StackCard[] = [
         logo: logoPath('rollup.png')
       },
       {
-        name: 'Esbuild',
+        name: 'ESbuild',
         link: 'https://esbuild.github.io/',
         logo: logoPath('esbuild.png')
+      },
+      {
+        name: 'Bun',
+        link: 'https://bun.sh/docs',
+        logo: logoPath('bun.png')
       }
     ]
   },
   {
-    name: 'CSS框架/引擎',
+    name: 'CSS框架/工具',
     sites: [
       {
         name: 'TailwindCSS',
@@ -83,7 +87,7 @@ export const stackSites: StackCard[] = [
         logo: logoPath('unocss.png')
       },
       {
-        name: 'scss',
+        name: 'SCSS',
         link: 'https://sass-lang.com/documentation/',
         logo: logoPath('sass.svg')
       },
@@ -95,23 +99,13 @@ export const stackSites: StackCard[] = [
     ]
   },
   {
-    name: '运行时',
+    name: '走向全栈',
     sites: [
-      {
-        name: 'Bun',
-        link: 'https://bun.sh/docs',
-        logo: logoPath('bun.png')
-      },
       {
         name: 'Node',
         link: 'https://nodejs.org/en/docs',
         logo: logoPath('node.png')
-      }
-    ]
-  },
-  {
-    name: '走向全栈',
-    sites: [
+      },
       {
         name: 'Nest',
         link: 'https://docs.nestjs.com/',
