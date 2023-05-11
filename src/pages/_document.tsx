@@ -15,6 +15,10 @@ export default function Document() {
           name="theme-color"
           content="#2C2E2F"
         />
+        <meta
+          name="google-site-verification"
+          content="ABRmhm3CDQH-Stdz8oF6lmtF8-mRgi9n_WSr5ngCLdE"
+        />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css"
