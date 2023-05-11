@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Card from './Card'
+import Card from './SiteCard'
 import CategoryTitle from './CategoryTitle'
 import { ATagSites } from '@/types'
 import { sortATagSitesByLevel } from '@/util/sites-sort'

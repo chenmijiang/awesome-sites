@@ -177,5 +177,4 @@ body::-webkit-scrollbar-thumb {
 
 .dark body {
   --sb-track-color: #000000;
-  --sb-thumb-color: #b5b7b8;
 }

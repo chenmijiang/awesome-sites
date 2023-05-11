@@ -2,28 +2,42 @@ import { Site } from '@/types'
 import styled from 'styled-components'
 
 type Props = {
-  site: Site
+  title: string
+  children: React.ReactNode
 }
 
-const Card = ({ site }: Props) => {
-  const name = site.name
-  const link = site.link
-  const desc = site.desc ? site.desc : '虽然没有描述，但是强烈推荐'
-  if (site === undefined) {
-    console.log('site is undefined')
-  }
+const Container = (props: Props) => {
+  const { title, children } = props
   return (
-    <CardContainer
-      href={link}
-      target="_blank"
-      className="w-full text-center min-h-[50px] rounded-md bg-white dark:bg-zinc-300 dark:shadow-none cursor-pointer shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
+    <>
       <div className="leading-[50px] text-cus-normal text-[18px] h-[50px] lh-[50px] border-b-[1px] border-solid border-b-[#e9e9e9]">
-        <span>{name}</span>
+        <span>{title}</span>
       </div>
       <div className="color-gray-500 text-cus-unactivated text-[14px] p-[15px] text-left">
-        <span>{desc}</span>
+        {children}
       </div>
-    </CardContainer>
+    </>
+  )
+}
+
+const Card = (props: Props & { link?: string }) => {
+  const { link, children } = props
+
+  if (link) {
+    return (
+      <CardContainer
+        href={link}
+        target="_blank"
+        className="w-full text-center min-h-[50px] rounded-md bg-white dark:bg-zinc-300 dark:shadow-none cursor-pointer shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
+        <Container {...props}>{children}</Container>
+      </CardContainer>
+    )
+  }
+
+  return (
+    <div className="w-full text-center min-h-[50px] rounded-md bg-white dark:bg-zinc-300 dark:shadow-none shadow-sm">
+      <Container {...props} />
+    </div>
   )
 }
 

@@ -18,7 +18,7 @@ import {
 } from './sites/utilSites'
 
 export const allSites = [
-  // 技术站点
+  // 技术社区
   techSites,
   // 周刊
   weekly,

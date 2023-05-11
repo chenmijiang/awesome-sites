@@ -1,4 +1,4 @@
-import Card from './Card'
+import Card from './SiteCard'
 import CategoryTitle from './CategoryTitle'
 import { ATagSites } from '@/types'
 import { sortSitesByLevel } from '@/util/sites-sort'
