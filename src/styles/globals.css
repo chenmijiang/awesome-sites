@@ -135,11 +135,36 @@ button:focus:not(:focus-visible) {
   width: 8px !important;
 }
 
+.theme {
+  transition: background-color 2s ease-in-out, color 0.5s ease-in-out;
+}
+
+body {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #a2a3a4;
+  --sb-size: 12px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+  border: 2px solid var(--sb-track-color);
+}
+
 /* dark theme */
 
 .dark {
   filter: invert(1) hue-rotate(180deg);
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .dark img {
@@ -148,4 +173,9 @@ button:focus:not(:focus-visible) {
 
 .dark .m-sidebar::before {
   background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.dark body {
+  --sb-track-color: #000000;
+  --sb-thumb-color: #b5b7b8;
 }

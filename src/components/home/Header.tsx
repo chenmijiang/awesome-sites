@@ -96,7 +96,7 @@ const Header = (props: Props) => {
                   icon="fluent:dark-theme-20-filled"
                   width={26}
                   height={26}
-                  className="dark:rotate-180 dark:transition-transform duration-500"
+                  className="dark:rotate-180 transition-transform duration-300"
                 />
               </label>
             </li>
