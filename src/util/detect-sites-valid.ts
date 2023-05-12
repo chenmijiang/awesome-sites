@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, writeFileSync } from 'fs'
 import path from 'path'
 
 import { fetchSite } from '@/util/sites-parse'
-import { allSites } from '@/configs/all.sites'
+import * as allSites from '@/configs/sites'
 
 const logDir = path.resolve(process.cwd(), 'logs')
 
@@ -15,14 +15,13 @@ export const detectSitesValid = async (callback?: Function) => {
 
   const logFileName = `${Date.now()}.log`
 
-  // 遍历 allSites 数组，获取所有网站的链接
+  // 遍历 allSites 对象，获取所有网站的链接
   const sites: { name: string; url: string }[] = []
-  allSites.forEach((aTagSites) => {
-    aTagSites.sites.forEach((site) => {
-      sites.push({
-        name: site.name,
-        url: site.link
-      })
+
+  Object.values(allSites).forEach((site) => {
+    sites.push({
+      name: site.name,
+      url: site.link
     })
   })
 

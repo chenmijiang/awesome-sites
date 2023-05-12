@@ -1,5 +1,6 @@
 import { Icon } from '@iconify-icon/react'
 import { ATagSites } from '@/types'
+import { regex_vis } from '@/configs/sites'
 
 export const regexpUtilsSites: ATagSites = {
   type: '工具-正则',
@@ -10,11 +11,5 @@ export const regexpUtilsSites: ATagSites = {
       height={26}
     />
   ),
-  sites: [
-    {
-      name: '正则生成、图解',
-      link: 'https://regex-vis.com/',
-      desc: '除了常见的图解正则，还可以通过鼠标点点点，对正则进行逻辑的增删改，详见GitHub的README'
-    }
-  ]
+  sites: [regex_vis]
 }

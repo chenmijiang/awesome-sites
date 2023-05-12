@@ -2,6 +2,7 @@
 
 import { Icon } from '@iconify-icon/react'
 import { ATagSites } from '@/types'
+import { figma, framer, pixso } from '@/configs/sites'
 
 export const designUtilSites: ATagSites = {
   type: '工具-设计',
@@ -13,21 +14,5 @@ export const designUtilSites: ATagSites = {
     />
   ),
   level: 2,
-  sites: [
-    {
-      name: 'figma',
-      link: 'https://www.figma.com/',
-      desc: '作为一个团队构建更好的产品。 使用 Figma 在一个地方进行设计、原型设计和收集反馈。'
-    },
-    {
-      name: 'framer',
-      link: 'https://www.framer.com/',
-      desc: 'Framer 是一个交互式的设计工具，可以帮助您创建高保真的原型，以及设计和代码的桥梁。'
-    },
-    {
-      name: 'pixso',
-      link: 'https://pixso.cn/',
-      desc: '产品设计一体化工具 一站式完成白板、原型、设计、交付和管理，把产品设计得更美好'
-    }
-  ]
+  sites: [figma, framer, pixso]
 }
