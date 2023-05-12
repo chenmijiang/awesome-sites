@@ -1,17 +1,21 @@
 import { StackCard } from '@/types'
 import {
+  animecss,
   ant_design,
   astro,
   bun,
+  element,
   esbuild,
   expressjs,
   fireboom,
+  framer_motion,
   leetcode,
   mongodb,
   nestjs,
   nextjs,
   nodejs,
   nuxtjs,
+  postgresql,
   prisma,
   qwik,
   react,
@@ -34,7 +38,11 @@ export const stackSites: StackCard[] = [
   },
   {
     name: 'UI组件库',
-    sites: [ant_design]
+    sites: [ant_design, element]
+  },
+  {
+    name: '动画/交互',
+    sites: [framer_motion, animecss]
   },
   {
     name: '构建工具',
@@ -50,7 +58,7 @@ export const stackSites: StackCard[] = [
   },
   {
     name: '数据库',
-    sites: [mongodb, prisma]
+    sites: [mongodb, postgresql, prisma]
   },
   {
     name: '其他',

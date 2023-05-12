@@ -180,7 +180,7 @@ export const astro: Site = {
 }
 
 export const mongodb: Site = {
-  name: 'mongodb',
+  name: 'MongoDB',
   link: 'https://www.mongodb.com/',
   logo: logoPath('mongodb.ico'),
   desc: 'mongodb'
@@ -280,7 +280,7 @@ export const oss_dict_code: Site = {
 export const oss_js_tutorial: Site = {
   name: '现代 JavaScript 教程',
   link: 'https://zh.javascript.info/',
-  logo: '',
+  logo: logoPath('js_tutorial.png'),
   desc: '现代 JavaScript 教程：有关示例和任务的简单但详细的解释包括：闭包、文档和事件，以及面向对象编程等。'
 }
 
@@ -779,4 +779,32 @@ export const defensivecss: Site = {
   link: 'https://defensivecss.dev/tips',
   logo: '',
   desc: '实用的CSS和设计技巧，有助于建立面向未来且经得起考验的用户界面'
+}
+
+export const element: Site = {
+  name: 'Element',
+  link: 'https://element.eleme.cn/#/zh-CN/component/installation',
+  logo: logoPath('element.svg'),
+  desc: 'Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库'
+}
+
+export const framer_motion: Site = {
+  name: 'Framer Motion',
+  link: 'https://www.framer.com/motion/examples/',
+  logo: logoPath('framer_motion.png'),
+  desc: 'Framer Motion 是一个用于 React 的开源的动画和交互式 UI 库'
+}
+
+export const animecss: Site = {
+  name: 'Animecss',
+  link: 'https://animate.style/',
+  logo: logoPath('animecss.ico'),
+  desc: 'Animate.css 是一个随时可用的跨浏览器动画库，供您在项目中使用。 非常适合强调、主页、滑块和注意力引导提示。'
+}
+
+export const postgresql: Site = {
+  name: 'PostgreSQL',
+  link: 'https://www.postgresql.org/',
+  logo: logoPath('postgresql.ico'),
+  desc: 'PostgreSQL 是一个功能强大的开源对象-关系型数据库管理系统，是自由软件基金会的一个项目'
 }
