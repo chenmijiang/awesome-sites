@@ -1,6 +1,7 @@
 import { Icon } from '@iconify-icon/react'
 import { ATagSites } from '@/types'
 import {
+  github,
   tech_dev,
   tech_hive,
   tech_juejin,
@@ -18,5 +19,13 @@ export const techSites: ATagSites = {
       height={26}
     />
   ),
-  sites: [tech_stackoverflow, tech_dev, tech_juejin, tech_segmentfault, tech_v2ex, tech_hive]
+  sites: [
+    tech_stackoverflow,
+    github,
+    tech_dev,
+    tech_juejin,
+    tech_segmentfault,
+    tech_v2ex,
+    tech_hive
+  ]
 }

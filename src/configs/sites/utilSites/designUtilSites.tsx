@@ -2,7 +2,7 @@
 
 import { Icon } from '@iconify-icon/react'
 import { ATagSites } from '@/types'
-import { figma, framer, pixso } from '@/configs/sites'
+import { drawio, figma, framer, pixso } from '@/configs/sites'
 
 export const designUtilSites: ATagSites = {
   type: '工具-设计',
@@ -14,5 +14,5 @@ export const designUtilSites: ATagSites = {
     />
   ),
   level: 2,
-  sites: [figma, framer, pixso]
+  sites: [figma, framer, pixso, drawio]
 }

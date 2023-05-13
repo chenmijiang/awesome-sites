@@ -27,7 +27,7 @@ export const chatgpt: Site = {
 
 export const react: Site = {
   name: 'React',
-  link: 'https://react.dev',
+  link: 'https://react.dev/learn',
   logo: logoPath('react.png'),
   desc: 'React'
 }
@@ -343,7 +343,7 @@ export const tech_dev: Site = {
 export const tech_juejin: Site = {
   name: '掘金',
   link: 'https://juejin.cn/',
-  logo: '',
+  logo: logoPath('juejin.png'),
   desc: '一个面向程序员的技术社区，主要关注前端、后端、移动端、人工智能、区块链等技术领域。用户可以在掘金社区中分享自己的技术经验、学习心得、开源项目等，也可以在社区中获取最新的技术资讯、解决问题、结交同行'
 }
 
@@ -807,4 +807,18 @@ export const postgresql: Site = {
   link: 'https://www.postgresql.org/',
   logo: logoPath('postgresql.ico'),
   desc: 'PostgreSQL 是一个功能强大的开源对象-关系型数据库管理系统，是自由软件基金会的一个项目'
+}
+
+export const github: Site = {
+  name: 'GitHub',
+  link: 'https://github.com/',
+  logo: logoPath('github.svg'),
+  desc: 'GitHub 是人们构建软件的地方。已经有超过 1 亿人使用 GitHub 去 discover，fork 和 contribute 超过 3.3 亿个项目。'
+}
+
+export const drawio: Site = {
+  name: 'draw.io',
+  link: 'https://app.diagrams.net/',
+  logo: logoPath('drawio.png'),
+  desc: 'Drawio 是一个开源的在线绘图工具，可以用来绘制流程图、UML图、组织结构图、网络图、思维导图、战略地图等'
 }
