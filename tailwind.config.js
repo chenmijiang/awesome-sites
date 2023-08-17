@@ -6,13 +6,29 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      sans: '-apple-system,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial!important;',
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        logo: '#52BE82',
+        divider: '#D8D8D8',
+      },
+      textColor: {
+        default: '#9499a0',
+        active: '#3d3d3d',
+        'section-title': '#18191c',
+        'section-default': '#61666D',
+      },
+      backgroundColor: {
+        box: '#f6f7f8',
+        'box-active': '#e3e5e7',
+      },
+      borderRadius: {
+        'box-small': '4px',
+        'box-normal': '8px',
       },
     },
   },
   plugins: [],
-}
+};

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .site-box {
+    @apply bg-box rounded-box-normal;
+  }
+}
+
