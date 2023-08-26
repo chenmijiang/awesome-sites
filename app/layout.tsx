@@ -1,6 +1,9 @@
-import NavBanner from '@/components/nav-banner';
-import { globalErrorHandler } from '@/utils/globalErrorHandler';
 import { Metadata } from 'next/types';
+
+import NavBanner from '@/components/nav-banner';
+import BgImage from '@/components/home/bg-image';
+import { fetchBingImg } from '@/utils';
+import { globalErrorHandler } from '@/utils/globalErrorHandler';
 
 export const metadata: Metadata = {
   title: '前端森林',
@@ -11,13 +14,15 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function RootLayout(props: Props) {
+export default async function RootLayout(props: Props) {
+  const bingImg = await fetchBingImg();
+
   return (
     <html lang="en">
       <body>
-        {/* 导航栏 */}
         <NavBanner />
         {props.children}
+        <BgImage img={bingImg} />
       </body>
     </html>
   );

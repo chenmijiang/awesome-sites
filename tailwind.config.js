@@ -24,6 +24,10 @@ module.exports = {
         box: '#f6f7f8',
         'box-active': '#e3e5e7',
       },
+      backgroundImage: {
+        'banner-shadow':
+          'linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.24) 46%, rgba(0,0,0,0.08) 76%, rgba(0,0,0,0.00) 100%);',
+      },
       borderRadius: {
         'box-small': '4px',
         'box-normal': '8px',
