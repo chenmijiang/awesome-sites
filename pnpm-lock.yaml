@@ -32,6 +32,9 @@ dependencies:
   react:
     specifier: 18.2.0
     version: 18.2.0
+  react-custom-scroll:
+    specifier: ^5.0.0
+    version: 5.0.0(prop-types@15.8.1)(react@18.2.0)
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
@@ -186,6 +189,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: false
     optional: true
@@ -195,6 +199,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: false
     optional: true
@@ -204,6 +209,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
     requiresBuild: true
     dev: false
     optional: true
@@ -213,6 +219,7 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
     requiresBuild: true
     dev: false
     optional: true
@@ -2148,6 +2155,16 @@ packages:
 
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+    dev: false
+
+  /react-custom-scroll@5.0.0(prop-types@15.8.1)(react@18.2.0):
+    resolution: {integrity: sha512-WJ6xdw5lBNScAvYiDJQXtSXktZjaf8K9CMDfS/3UuCTU3MYSr7XSwDnYW1T0ZqxAaOnbvB5U1D922+0ZVVSJ8Q==}
+    peerDependencies:
+      prop-types: '*'
+      react: '*'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
     dev: false
 
   /react-dom@18.2.0(react@18.2.0):

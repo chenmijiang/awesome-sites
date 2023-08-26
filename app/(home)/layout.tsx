@@ -1,4 +1,5 @@
 import NavBanner from '@/components/nav-banner';
+import { globalErrorHandler } from '@/utils/globalErrorHandler';
 import { Metadata } from 'next/types';
 
 export const metadata: Metadata = {
@@ -21,3 +22,5 @@ export default function RootLayout(props: Props) {
     </html>
   );
 }
+
+globalErrorHandler();
