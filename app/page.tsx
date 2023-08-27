@@ -1,5 +1,11 @@
-import '@/assets/globals.css';
+import '@/assets/globals.scss';
 
 export default function Home() {
-  return <>文本内容</>;
+  return (
+    <div
+      className="home-page">
+      homepage
+      {/* TODO: 其他 */}
+    </div>
+  );
 }

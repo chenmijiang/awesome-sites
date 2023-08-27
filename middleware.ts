@@ -5,8 +5,8 @@ export const config = {
   matcher: '/api/:path+',
 };
 
+// 路由中间件
 export function middleware(request: NextRequest) {
-  console.log('middleware.ts: middleware() called');
 
   return NextResponse.next();
 }

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .icon {
+    @apply w-[24px] h-[24px] fill-white;
+
+    &.icon-setting {
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .home-page {
+    height: calc(100vh - 160px);
+    background-color: white;
+  }
+
+  .site-box {
+    @apply bg-box rounded-box-normal;
+  }
+
+  .search-box {
+    @apply w-full h-[40px] flex items-center justify-between rounded-box-normal opacity-70;
+
+    @apply transition-all duration-200 bg-white;
+
+    &:hover {
+      @apply opacity-100;
+    }
+  }
+
+  .search-input {
+    // 重置输入框样式
+    @apply appearance-none border-none outline-none w-full h-full px-2 text-sm;
+    // 其他样式
+    @apply pr-[40px] rounded-box-normal transition-colors duration-200;
+  }
+}

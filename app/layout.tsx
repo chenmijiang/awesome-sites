@@ -1,6 +1,6 @@
 import { Metadata } from 'next/types';
 
-import NavBanner from '@/components/nav-banner';
+import NavBanner from '@/components/global/nav-banner';
 import BgImage from '@/components/home/bg-image';
 import { fetchBingImg } from '@/utils';
 import { globalErrorHandler } from '@/utils/globalErrorHandler';

@@ -20,6 +20,10 @@ module.exports = {
         'section-title': '#18191c',
         'section-default': '#61666D',
       },
+      fill: {
+        default: '#9499a0',
+        active: '#3d3d3d',
+      },
       backgroundColor: {
         box: '#f6f7f8',
         'box-active': '#e3e5e7',
