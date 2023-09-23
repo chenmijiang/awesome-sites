@@ -22,47 +22,52 @@ const SearchInput: React.ForwardRefRenderFunction<SearchInputRefProps, SearchInp
   const blur = () => {
     inputRef?.current?.blur();
   };
-  const clear = () => {
+  const set = (value: string) => {
     if (inputRef?.current) {
-      inputRef.current.value = '';
+      inputRef.current.value = value;
+      update();
     }
   };
+  const clear = () => set('');
 
   useImperativeHandle(ref, () => {
     return {
       focus,
       blur,
+      set,
       clear,
       value: inputRef?.current?.value,
     };
   });
 
   return (
-    <div className="flex-1 h-full py-1 pr-1 relative">
-      <input
-        className={`search-input ${
-          isFocused ? 'text-active opacity-80 bg-box-active' : 'text-default'
-        }`}
-        maxLength={1000}
-        placeholder="输入关键词搜索 | tab键切换引擎"
-        onChange={update}
-        onBlur={(e) => e.preventDefault}
-        onFocus={(e) => e.preventDefault}
-        ref={inputRef}
-      />
-      <div className="absolute top-0 right-0 w-[40px] h-[40px] flex justify-center items-center">
-        <Icon
-          name="close"
-          className={`icon w-[18px] h-[18px] fill-default cursor-pointer ${
-            (inputRef.current?.value.length ?? 0) > 0 ? 'visible' : 'invisible'
+    <>
+      <div className="flex-1 h-full py-1 pr-1 relative">
+        <input
+          className={`search-input ${
+            isFocused ? 'text-active opacity-80 bg-box-active' : 'text-default'
           }`}
-          onClick={() => {
-            clear();
-            update();
-          }}
+          maxLength={1000}
+          placeholder="输入关键词搜索 | tab键切换引擎"
+          onChange={update}
+          onBlur={(e) => e.preventDefault}
+          onFocus={(e) => e.preventDefault}
+          ref={inputRef}
         />
+        <div className="absolute top-0 right-0 w-[40px] h-[40px] flex justify-center items-center">
+          <Icon
+            name="close"
+            className={`icon w-[18px] h-[18px] fill-default cursor-pointer ${
+              (inputRef.current?.value.length ?? 0) > 0 ? 'visible' : 'invisible'
+            }`}
+            onClick={() => {
+              clear();
+              update();
+            }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

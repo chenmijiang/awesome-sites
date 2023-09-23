@@ -8,6 +8,7 @@ interface Message {
 export interface SearchInputRefProps {
   focus: () => void;
   blur: () => void;
+  set: (value: string) => void;
   clear: () => void;
   value: string | undefined;
 }

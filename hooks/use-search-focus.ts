@@ -26,7 +26,7 @@ const useSearchFocus = (
     { target: container }
   );
 
-  useClickAway(() => {
+  useClickAway((event) => {
     input.current?.blur();
     setIsFocused(false);
     containerOuterClick?.(false);

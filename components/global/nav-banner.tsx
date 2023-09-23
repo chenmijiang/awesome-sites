@@ -1,9 +1,13 @@
+'use client';
+
 import Image from 'next/image';
+import { LocalForageProvider } from 'rc-localforage';
 
 import Alink from '@/components/common/alink';
 import logo from '@/assets/image/logo.png';
 import Icon from '@/assets/icons/icon';
 import SearchBox from './search-box';
+import { searchDataTable } from '@/constant/database';
 
 export default function NavBanner() {
   return (
@@ -21,7 +25,9 @@ export default function NavBanner() {
           <Alink href="/">首页</Alink>
           <Alink href="https://www.momoyu.cc">热榜</Alink>
         </div>
-        <SearchBox />
+        <LocalForageProvider config={searchDataTable}>
+          <SearchBox />
+        </LocalForageProvider>
         <div className="flex gap-5">
           {/* TODO: 设置开关 */}
           <div className="cursor-pointer">
