@@ -9,6 +9,15 @@ export const searchDataTable: LocalForageOptions = {
   description: 'search data table',
 };
 
+// 收藏站点相关的数据表
+export const favoriteDataTable: LocalForageOptions = {
+  name: 'home',
+  storeName: 'favorite',
+  driver: driver.LOCALSTORAGE,
+  version: 1.0,
+  description: 'favorite data table',
+};
+
 // 站点相关的数据表
 export const sitesDataTable: LocalForageOptions = {
   name: 'home',
