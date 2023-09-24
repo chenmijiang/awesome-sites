@@ -25,9 +25,9 @@ const PersonalCollection = () => {
         <CollectionSites />
       </LocalForageProvider>
       {/*   分界线 */}
-      <div className="w-[2px] h-full bg-box-active mx-3"></div>
+      <div className="w-[2px] h-full bg-box-active mx-3 rounded-xl opacity-40"></div>
       {/* 本站说明 */}
-      <div className="bg-box rounded-box-normal px-4 py-3">
+      <div className="bg-box rounded-box-normal px-4 py-3 opacity-40">
         {SitesDatas.map((item, index) => {
           return (
             <div
@@ -35,9 +35,9 @@ const PersonalCollection = () => {
               key={index}>
               <Icon
                 name={item.icon}
-                className="icon fill-default"
+                className="icon fill-section-default"
               />
-              <span className="ml-3 text-default">{item.name}</span>
+              <span className="ml-3 text-section-default">{item.name}</span>
             </div>
           );
         })}

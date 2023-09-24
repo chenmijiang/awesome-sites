@@ -18,7 +18,7 @@ const SearchHint = ({ history, clearHistory, searchRef, submitSearch }: SearchHi
       {/* 搜索历史 */}
       <section className={`${history.length > 0 ? 'block' : 'hidden'}`}>
         <div className="flex justify-between">
-          <div className="text-active text-sm py-[6px]">搜索历史</div>
+          <div className="text-section-default text-sm py-[6px]">搜索历史</div>
           <Icon
             name="clash"
             className="pointer-events-auto w-5 h-7 cursor-pointer fill-default hover:fill-active"
@@ -38,7 +38,7 @@ const SearchHint = ({ history, clearHistory, searchRef, submitSearch }: SearchHi
       </section>
       {/* 站内热搜 */}
       <section>
-        <div className="text-active text-sm py-[6px]">站内热搜</div>
+        <div className="text-section-default text-sm py-[6px]">站内热搜</div>
         {/* 结果 */}
         <div className="flex justify-center">
           <div className="text-default text-xs">暂无站内热搜</div>

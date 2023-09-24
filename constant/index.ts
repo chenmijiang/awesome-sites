@@ -11,4 +11,8 @@ export const engines = [
     name: 'stackflow',
     url: 'https://stackoverflow.com/search?q=',
   },
+  {
+    name: 'npm',
+    url: 'https://www.npmjs.com/search?q=',
+  },
 ];

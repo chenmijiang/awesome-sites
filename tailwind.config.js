@@ -23,6 +23,8 @@ module.exports = {
       fill: {
         default: '#9499a0',
         active: '#3d3d3d',
+        'section-title': '#18191c',
+        'section-default': '#61666D',
       },
       backgroundColor: {
         box: '#f6f7f8',
@@ -31,6 +33,7 @@ module.exports = {
       backgroundImage: {
         'banner-shadow':
           'linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.24) 46%, rgba(0,0,0,0.08) 76%, rgba(0,0,0,0.00) 100%);',
+        'favorite-shadow': 'linear-gradient(0deg, black, transparent 240px)',
       },
       borderRadius: {
         'box-small': '4px',
