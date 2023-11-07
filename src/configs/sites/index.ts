@@ -39,6 +39,13 @@ export const leetcode: Site = {
   desc: 'leetcode'
 }
 
+export const go: Site = {
+  name: 'Go',
+  link: 'https://golang.google.cn/doc/',
+  logo: logoPath('go.png'),
+  desc: 'go'
+}
+
 export const vue: Site = {
   name: 'Vue',
   link: 'https://cn.vuejs.org/guide/introduction.html',
@@ -195,7 +202,7 @@ export const prisma: Site = {
 
 export const fireboom: Site = {
   name: 'fireboom',
-  link: 'https://ansons-organization.gitbook.io/product-manual/',
+  link: 'https://docs.fireboom.io/',
   logo: logoPath('fireboom.ico'),
   desc: 'fireboom'
 }

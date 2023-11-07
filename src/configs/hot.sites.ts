@@ -1,7 +1,7 @@
 import type { HotSite } from '@/types'
 import {
   phind,
-  chatgpt_cn,
+  // chatgpt_cn,
   chatgpt,
   react,
   leetcode,
@@ -11,7 +11,7 @@ import {
 
 export const hotSites: HotSite[] = [
   phind,
-  chatgpt_cn,
+  // chatgpt_cn,
   chatgpt,
   oss_js_tutorial,
   tech_juejin,
