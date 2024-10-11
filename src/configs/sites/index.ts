@@ -564,6 +564,13 @@ export const ilovepdf: Site = {
   desc: '在线编辑PDF，合并PDF，拆分PDF，压缩PDF，PDF转换'
 }
 
+export const iloveimg: Site = {
+  name: 'i Love IMG',
+  link: 'https://www.iloveimg.com/zh-cn',
+  logo: '',
+  desc: 'iLoveIMG是一款在线处理图片文件的网站。我们的服务完全免费，而且使用简便。网站的功能有：压缩图像文件、调整文件尺寸、裁剪文件，以及转换文件格式等！'
+}
+
 export const codepen: Site = {
   name: 'codepen',
   link: 'https://codepen.io/',
@@ -828,4 +835,11 @@ export const drawio: Site = {
   link: 'https://app.diagrams.net/',
   logo: logoPath('drawio.png'),
   desc: 'Drawio 是一个开源的在线绘图工具，可以用来绘制流程图、UML图、组织结构图、网络图、思维导图、战略地图等'
+}
+
+export const excalidraw: Site = {
+  name: 'Excalidraw',
+  link: 'https://excalidraw.com/',
+  logo: '',
+  desc: 'Excalidraw 是一款虚拟协作白板工具，可让您轻松绘制具有手绘风格的图表。'
 }
