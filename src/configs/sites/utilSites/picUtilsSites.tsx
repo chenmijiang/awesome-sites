@@ -1,6 +1,6 @@
 import { Icon } from '@iconify-icon/react'
 import { ATagSites } from '@/types'
-import { carbon, icones, ray_so, sprite_generator, iloveimg } from '@/configs/sites'
+import { carbon, icones, ray_so, sprite_generator, iloveimg, tinypng } from '@/configs/sites'
 
 export const picUtilsSites: ATagSites = {
   type: '工具-图片',
@@ -11,5 +11,5 @@ export const picUtilsSites: ATagSites = {
       height={26}
     />
   ),
-  sites: [icones, sprite_generator, ray_so, carbon, iloveimg]
+  sites: [icones, sprite_generator, ray_so, carbon, iloveimg, tinypng]
 }

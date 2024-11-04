@@ -843,3 +843,10 @@ export const excalidraw: Site = {
   logo: '',
   desc: 'Excalidraw 是一款虚拟协作白板工具，可让您轻松绘制具有手绘风格的图表。'
 }
+
+export const tinypng: Site = {
+  name: 'TinyPNG',
+  link: 'https://tinypng.com/',
+  logo: '',
+  desc: '免费在线图像压缩器，让网站运行速度更快！使用 TinyPNG 的智能有损压缩引擎，缩小 WEBP、JPEG 和 PNG 图像的文件大小。'
+}
