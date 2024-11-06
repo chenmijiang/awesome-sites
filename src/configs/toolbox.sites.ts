@@ -8,8 +8,8 @@ import {
   aiUtilSites,
   otherUtilSites,
   codeUtilSites,
-  designUtilSites
-} from './sites/utilSites'
+  designUtilSites,
+} from "./sites/utilSites";
 
 export const toolboxSites = [
   // 工具站点
@@ -22,5 +22,5 @@ export const toolboxSites = [
   aiUtilSites,
   otherUtilSites,
   codeUtilSites,
-  designUtilSites
-]
+  designUtilSites,
+];

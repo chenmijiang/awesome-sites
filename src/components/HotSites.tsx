@@ -1,23 +1,17 @@
-import Image from 'next/image'
-import styled from 'styled-components'
-import { Icon } from '@iconify-icon/react'
-import { hotSites } from '@/configs/hot.sites'
-import { sortSitesByLevel } from '@/util/sites-sort'
+import Image from "next/image";
+import styled from "styled-components";
+import { Icon } from "@iconify-icon/react";
+import { hotSites } from "@/configs/hot.sites";
+import { sortSitesByLevel } from "@/util/sites-sort";
 
-const sortHotSites = sortSitesByLevel(hotSites)
+const sortHotSites = sortSitesByLevel(hotSites);
 
 const HotSites = () => {
   return (
     <section>
       <div className="flex items-center mb-[10px] text-[#f74311]">
-        <Icon
-          icon="solar:fire-bold"
-          width={26}
-          height={26}
-        />
-        <h2
-          className="text-lg font-bold mt-1 ml-1"
-          id="热门站点">
+        <Icon icon="solar:fire-bold" width={26} height={26} />
+        <h2 className="text-lg font-bold mt-1 ml-1" id="热门站点">
           热门站点
         </h2>
       </div>
@@ -27,7 +21,8 @@ const HotSites = () => {
             key={index}
             href={site.link}
             target="_blank"
-            className="dark:bg-zinc-300 dark:shadow-none flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 py-2 px-4 bg-white shadow-sm text-cus-normal hover:text-cus-activated hover:shadow-md hover:-translate-y-1 transition-transform duration-300">
+            className="dark:bg-zinc-300 dark:shadow-none flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 py-2 px-4 bg-white shadow-sm text-cus-normal hover:text-cus-activated hover:shadow-md hover:-translate-y-1 transition-transform duration-300"
+          >
             {site.logo && (
               <Image
                 src={site.logo}
@@ -42,8 +37,8 @@ const HotSites = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
 const HotSiteLink = styled.a`
   text-decoration: none;
@@ -72,6 +67,6 @@ const HotSiteLink = styled.a`
   &:focus {
     text-decoration: none;
   }
-`
+`;
 
-export default HotSites
+export default HotSites;

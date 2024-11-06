@@ -1,20 +1,12 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html
-      lang="en"
-      className="theme">
+    <Html lang="en" className="theme">
       <Head>
         <meta charSet="utf-8" />
-        <meta
-          http-equiv="Content-Type"
-          content="text/html; charset=UTF-8"
-        />
-        <meta
-          name="theme-color"
-          content="#2C2E2F"
-        />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="theme-color" content="#2C2E2F" />
         <meta
           name="google-site-verification"
           content="ABRmhm3CDQH-Stdz8oF6lmtF8-mRgi9n_WSr5ngCLdE"
@@ -32,5 +24,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

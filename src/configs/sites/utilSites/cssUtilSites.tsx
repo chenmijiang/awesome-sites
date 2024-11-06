@@ -1,5 +1,5 @@
-import { Icon } from '@iconify-icon/react'
-import { ATagSites } from '@/types'
+import { Icon } from "@iconify-icon/react";
+import { ATagSites } from "@/types";
 import {
   accordionslider,
   animista,
@@ -23,18 +23,12 @@ import {
   tobiasahlin_loading,
   webgradients,
   websafecolors,
-  you_need_to_know_css
-} from '@/configs/sites'
+  you_need_to_know_css,
+} from "@/configs/sites";
 
 export const cssUtilSites: ATagSites = {
-  type: '工具-css',
-  icon: (
-    <Icon
-      icon="ion:logo-css3"
-      width={26}
-      height={26}
-    />
-  ),
+  type: "工具-css",
+  icon: <Icon icon="ion:logo-css3" width={26} height={26} />,
   sites: [
     websafecolors,
     svgbackgrounds,
@@ -58,6 +52,6 @@ export const cssUtilSites: ATagSites = {
     fancy_border_radius2,
     tobiasahlin_loading,
     css_easings,
-    defensivecss
-  ]
-}
+    defensivecss,
+  ],
+};

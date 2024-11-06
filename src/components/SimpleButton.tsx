@@ -1,12 +1,16 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 type Props = {
-  children: any
-}
+  children: any;
+};
 
 const SimpleButton = (props: Props) => {
-  return <SimpleButtonContainer className="m-btn bg-black">{props.children}</SimpleButtonContainer>
-}
+  return (
+    <SimpleButtonContainer className="m-btn bg-black">
+      {props.children}
+    </SimpleButtonContainer>
+  );
+};
 
 const SimpleButtonContainer = styled.div`
   border-radius: 20px;
@@ -15,6 +19,6 @@ const SimpleButtonContainer = styled.div`
   text-align: center;
   display: inline-block;
   margin: 0 5px;
-`
+`;
 
-export default SimpleButton
+export default SimpleButton;

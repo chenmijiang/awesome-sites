@@ -1,21 +1,22 @@
-import { Icon } from '@iconify-icon/react'
+import { Icon } from "@iconify-icon/react";
 
-import MixedLink from '@/components/MixedLink'
-import ScrollPanel from '@/components/ui/ScrollPanel'
-import { SideBarSite } from '@/types'
-import { sortSitesByLevel } from '@/util/sites-sort'
+import MixedLink from "@/components/MixedLink";
+import ScrollPanel from "@/components/ui/ScrollPanel";
+import { SideBarSite } from "@/types";
+import { sortSitesByLevel } from "@/util/sites-sort";
 
 type Props = {
-  sites: SideBarSite[]
-}
+  sites: SideBarSite[];
+};
 
 const MobileSidebar = (props: Props) => {
-  let sortSites = sortSitesByLevel(props.sites)
+  let sortSites = sortSitesByLevel(props.sites);
 
   return (
     <div
       id="m-sidebar"
-      className="w-0 fixed top-0 left-0 h-full overflow-auto z-10 transition-width">
+      className="w-0 fixed top-0 left-0 h-full overflow-auto z-10 transition-width"
+    >
       <div className="modal-dialog h-full sidebar-nav-inner flex flex-col bg-white">
         {/* sidebar-logo */}
         <div className="sidebar-logo border-b border-solid border-gray-300 h-[50px]"></div>
@@ -23,14 +24,16 @@ const MobileSidebar = (props: Props) => {
         <div className="sidebar-menu flex-1">
           <ScrollPanel
             className="sidebar-scroll h-full"
-            style={{ height: 'calc(100vh - 150px)', outline: 'none' }}>
+            style={{ height: "calc(100vh - 150px)", outline: "none" }}
+          >
             <ul>
               {sortSites.map((list, index) => {
                 return (
                   <li
                     className="sidebar-item leading-10 ml-4 my-2"
                     title={list.type}
-                    key={index}>
+                    key={index}
+                  >
                     <MixedLink
                       anchor={list.anchor !== false}
                       activeClass="active"
@@ -38,8 +41,9 @@ const MobileSidebar = (props: Props) => {
                       smooth={true}
                       offset={index === 0 ? -500 : -70}
                       duration={500}
-                      to={list.anchor !== false ? list.type : list.link || '/'}
-                      className="flex items-center hover:no-underline h-[30px] cursor-pointer">
+                      to={list.anchor !== false ? list.type : list.link || "/"}
+                      className="flex items-center hover:no-underline h-[30px] cursor-pointer"
+                    >
                       {list.icon !== null ? (
                         list.icon
                       ) : (
@@ -54,7 +58,7 @@ const MobileSidebar = (props: Props) => {
                       </span>
                     </MixedLink>
                   </li>
-                )
+                );
               })}
             </ul>
           </ScrollPanel>
@@ -66,12 +70,9 @@ const MobileSidebar = (props: Props) => {
               <MixedLink
                 to="/doc"
                 anchor={false}
-                className="flex items-center justify-center hover:no-underline w-full">
-                <Icon
-                  icon="gg:readme"
-                  width={24}
-                  height={24}
-                />
+                className="flex items-center justify-center hover:no-underline w-full"
+              >
+                <Icon icon="gg:readme" width={24} height={24} />
                 <span className="logo-detail leading-7 ml-2 whitespace-nowrap text-ellipsis overflow-hidden">
                   接口文档
                 </span>
@@ -81,12 +82,9 @@ const MobileSidebar = (props: Props) => {
               <MixedLink
                 to="/about"
                 anchor={false}
-                className="flex items-center justify-center hover:no-underline w-full">
-                <Icon
-                  icon="mdi:information"
-                  width={24}
-                  height={24}
-                />
+                className="flex items-center justify-center hover:no-underline w-full"
+              >
+                <Icon icon="mdi:information" width={24} height={24} />
                 <span className="logo-detail leading-7 ml-2 whitespace-nowrap text-ellipsis overflow-hidden">
                   关于本站
                 </span>
@@ -96,7 +94,7 @@ const MobileSidebar = (props: Props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MobileSidebar
+export default MobileSidebar;

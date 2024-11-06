@@ -1,52 +1,53 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import FormModal from './FormModal'
-import SimpleButton from '@/components/SimpleButton'
-import { useEffect } from 'react'
+import FormModal from "./FormModal";
+import SimpleButton from "@/components/SimpleButton";
+import { useEffect } from "react";
 
 interface ILocalSite {
-  name: string
-  link: string
+  name: string;
+  link: string;
 }
 
 const CustomSites = () => {
-  let modalVisible = false
-  let newSite: ILocalSite = {} as any // 新增站点
+  let modalVisible = false;
+  let newSite: ILocalSite = {} as any; // 新增站点
 
-  let localList: ILocalSite[] = []
+  let localList: ILocalSite[] = [];
 
   useEffect(() => {
-    const item = localStorage.getItem('__local_sites__')
+    const item = localStorage.getItem("__local_sites__");
     if (item) {
-      localList = JSON.parse(item)
+      localList = JSON.parse(item);
     }
     return () => {
       if (localList.length) {
-        localStorage.setItem('__local_sites__', JSON.stringify(localList))
+        localStorage.setItem("__local_sites__", JSON.stringify(localList));
       }
       // 关闭弹窗时 删除已填数据
       if (!modalVisible) {
-        newSite = {} as any
+        newSite = {} as any;
       }
-    }
-  }, [])
+    };
+  }, []);
 
   const handleOk = () => {
-    console.log('111: ', newSite)
+    console.log("111: ", newSite);
     if (newSite.name && newSite.link) {
-      localList = [...localList, { ...newSite }] as ILocalSite[]
+      localList = [...localList, { ...newSite }] as ILocalSite[];
     }
-    modalVisible = false
-  }
+    modalVisible = false;
+  };
 
   const handleCancel = () => {
-    modalVisible = false
-  }
+    modalVisible = false;
+  };
   return (
     <CustomSitesContainer>
       <div
         className="btn cursor-pointer m-5px"
-        onClick={() => (modalVisible = true)}>
+        onClick={() => (modalVisible = true)}
+      >
         新增私人收藏站点 👏
       </div>
 
@@ -62,7 +63,8 @@ const CustomSites = () => {
                 <a
                   href="{site.link}"
                   target="_blank"
-                  className="bg-black text-white">
+                  className="bg-black text-white"
+                >
                   {site.name}
                 </a>
               </SimpleButton>
@@ -73,27 +75,32 @@ const CustomSites = () => {
 
       <FormModal
         visible={modalVisible}
-        title={'新增私人收藏站点'}
+        title={"新增私人收藏站点"}
         onCancel={handleCancel}
-        onOk={handleOk}>
+        onOk={handleOk}
+      >
         <div className="flex flex-col">
           <input
             type="text"
             placeholder="请输入需要添加的站点名称"
             className="m-2 p-2 border-none bg-[#f1f1f1] b-rd"
-            onInput={(ev: React.ChangeEvent<HTMLInputElement>) => (newSite.name = ev.target.value)}
+            onInput={(ev: React.ChangeEvent<HTMLInputElement>) =>
+              (newSite.name = ev.target.value)
+            }
           />
           <input
             type="text"
             placeholder="请输入需要添加的站点url"
             className="m-2 p-2 border-none bg-[#f1f1f1] b-rd"
-            onInput={(ev: React.ChangeEvent<HTMLInputElement>) => (newSite.link = ev.target.value)}
+            onInput={(ev: React.ChangeEvent<HTMLInputElement>) =>
+              (newSite.link = ev.target.value)
+            }
           />
         </div>
       </FormModal>
     </CustomSitesContainer>
-  )
-}
+  );
+};
 
 const CustomSitesContainer = styled.div`
   .btn {
@@ -107,6 +114,6 @@ const CustomSitesContainer = styled.div`
   .btn:hover {
     box-shadow: 4px 4px 8px gray;
   }
-`
+`;
 
-export default CustomSites
+export default CustomSites;

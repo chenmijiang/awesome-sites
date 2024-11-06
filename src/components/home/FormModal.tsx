@@ -1,35 +1,29 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 type Props = {
-  visible: boolean
-  title: string
-  onOk: () => void
-  onCancel: () => void
-  children: React.ReactNode
-}
+  visible: boolean;
+  title: string;
+  onOk: () => void;
+  onCancel: () => void;
+  children: React.ReactNode;
+};
 
 const FormModal = ({ visible, title, onOk, onCancel, ...props }: Props) => {
   return (
     <>
       {visible && (
         <FormModalContainer>
-          <div
-            className="modal-mask"
-            onClick={onCancel}></div>
+          <div className="modal-mask" onClick={onCancel}></div>
           <div className="modal-container">
             <div className="modal-header">
               <div className="modal-title">{title}</div>
             </div>
             <div className="modal-body">{props.children}</div>
             <div className="modal-footer">
-              <button
-                className="modal-cancel-btn btn"
-                onClick={onCancel}>
+              <button className="modal-cancel-btn btn" onClick={onCancel}>
                 取消
               </button>
-              <button
-                className="btn"
-                onClick={onOk}>
+              <button className="btn" onClick={onOk}>
                 新增
               </button>
             </div>
@@ -37,8 +31,8 @@ const FormModal = ({ visible, title, onOk, onCancel, ...props }: Props) => {
         </FormModalContainer>
       )}
     </>
-  )
-}
+  );
+};
 
 const FormModalContainer = styled.div`
   .modal-mask {
@@ -97,6 +91,6 @@ const FormModalContainer = styled.div`
       background-color: #ff4d4d;
     }
   }
-`
+`;
 
-export default FormModal
+export default FormModal;

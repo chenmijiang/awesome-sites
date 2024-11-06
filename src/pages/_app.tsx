@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import type { AppProps } from 'next/app'
-import { Analytics } from '@vercel/analytics/react'
+import Head from "next/head";
+import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 
-import '@/styles/globals.css'
-import '@/styles/font-awesome.min.css'
+import "@/styles/globals.css";
+import "@/styles/font-awesome.min.css";
 
-import '@/util/init-data'
+import "@/util/init-data";
 
-import { AppProvider } from '@/store'
+import { AppProvider } from "@/store";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -32,5 +32,5 @@ export default function App({ Component, pageProps }: AppProps) {
       </AppProvider>
       <Analytics />
     </>
-  )
+  );
 }

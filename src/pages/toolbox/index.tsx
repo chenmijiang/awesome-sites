@@ -1,15 +1,19 @@
-import Head from 'next/head'
-import HotSites from '@/components/HotSites'
-import MainPanel from '@/components/ui/MainPanel'
-import SitesList from '@/components/home/SitesList'
-import { fixedSites } from '@/configs/fixedSites'
-import { toolboxSites } from '@/configs/toolbox.sites'
+import Head from "next/head";
+import HotSites from "@/components/HotSites";
+import MainPanel from "@/components/ui/MainPanel";
+import SitesList from "@/components/home/SitesList";
+import { fixedSites } from "@/configs/fixedSites";
+import { toolboxSites } from "@/configs/toolbox.sites";
 
 const ToolboxPage = () => {
-  const sites = fixedSites.slice(0, 1)
+  const sites = fixedSites.slice(0, 1);
   sites.push(
-    ...toolboxSites.map((site) => ({ type: site.type, icon: site.icon, level: site.level }))
-  )
+    ...toolboxSites.map((site) => ({
+      type: site.type,
+      icon: site.icon,
+      level: site.level,
+    })),
+  );
 
   return (
     <>
@@ -23,7 +27,7 @@ const ToolboxPage = () => {
         <SitesList sites={toolboxSites} />
       </MainPanel>
     </>
-  )
-}
+  );
+};
 
-export default ToolboxPage
+export default ToolboxPage;

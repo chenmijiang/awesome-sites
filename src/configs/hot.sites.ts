@@ -1,4 +1,4 @@
-import type { HotSite } from '@/types'
+import type { HotSite } from "@/types";
 import {
   phind,
   // chatgpt_cn,
@@ -6,8 +6,8 @@ import {
   react,
   leetcode,
   oss_js_tutorial,
-  tech_juejin
-} from '@/configs/sites'
+  tech_juejin,
+} from "@/configs/sites";
 
 export const hotSites: HotSite[] = [
   phind,
@@ -16,5 +16,5 @@ export const hotSites: HotSite[] = [
   oss_js_tutorial,
   tech_juejin,
   react,
-  leetcode
-]
+  leetcode,
+];

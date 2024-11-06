@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import styled from 'styled-components'
-import { Icon } from '@iconify-icon/react'
-import { stackSites } from '@/configs/stack.sites'
-import { sortSitesByLevel } from '@/util/sites-sort'
+import Image from "next/image";
+import styled from "styled-components";
+import { Icon } from "@iconify-icon/react";
+import { stackSites } from "@/configs/stack.sites";
+import { sortSitesByLevel } from "@/util/sites-sort";
 
-import Card from '@/components/Card'
+import Card from "@/components/Card";
 
 const StackSites = () => {
   return (
@@ -16,17 +16,13 @@ const StackSites = () => {
           width={22}
           height={22}
         />
-        <h2
-          className="text-lg font-bold mt-1 ml-1"
-          id="技术栈">
+        <h2 className="text-lg font-bold mt-1 ml-1" id="技术栈">
           技术栈
         </h2>
       </div>
       <div className="grid grid-cols-list gap-3">
         {stackSites.map((card, index) => (
-          <Card
-            key={index}
-            title={card.name}>
+          <Card key={index} title={card.name}>
             <CardContain className="flex flex-wrap gap-1 max-h-[160px] overflow-auto">
               {card.sites.length !== 0
                 ? sortSitesByLevel(card.sites).map((site, i) => (
@@ -34,7 +30,8 @@ const StackSites = () => {
                       key={i}
                       href={site.link}
                       target="_blank"
-                      className="dark:shadow-none flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 py-2 px-4 bg-[#f1f1f1]/80 shadow text-black hover:-translate-y-1 transition-transform duration-300">
+                      className="dark:shadow-none flex items-center overflow-hidden rounded-[50px] cursor-pointer m-1 py-2 px-4 bg-[#f1f1f1]/80 shadow text-black hover:-translate-y-1 transition-transform duration-300"
+                    >
                       {site.logo && (
                         <Image
                           src={site.logo}
@@ -44,17 +41,19 @@ const StackSites = () => {
                           className="md:mr-1"
                         />
                       )}
-                      <span className="md:inline-block hidden">{site.name}</span>
+                      <span className="md:inline-block hidden">
+                        {site.name}
+                      </span>
                     </HotSiteLink>
                   ))
-                : '等待填充'}
+                : "等待填充"}
             </CardContain>
           </Card>
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
 const CardContain = styled.div`
   --sb-track-color: transparent;
@@ -76,7 +75,7 @@ const CardContain = styled.div`
     border-radius: 6px;
     border: 2px solid var(--sb-track-color);
   }
-`
+`;
 
 const HotSiteLink = styled.a`
   text-decoration: none;
@@ -105,6 +104,6 @@ const HotSiteLink = styled.a`
   &:focus {
     text-decoration: none;
   }
-`
+`;
 
-export default StackSites
+export default StackSites;

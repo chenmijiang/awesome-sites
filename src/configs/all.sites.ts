@@ -1,9 +1,9 @@
-import { techSites } from './sites/techSites'
-import { weekly } from './sites/weekly'
-import { blog } from './sites/blog'
-import { teamBlog } from './sites/teamBlog'
-import { spec } from './sites/spec'
-import { ossSites } from './sites/ossSites'
+import { techSites } from "./sites/techSites";
+import { weekly } from "./sites/weekly";
+import { blog } from "./sites/blog";
+import { teamBlog } from "./sites/teamBlog";
+import { spec } from "./sites/spec";
+import { ossSites } from "./sites/ossSites";
 import {
   cssUtilSites,
   jsUtilSites,
@@ -14,8 +14,8 @@ import {
   aiUtilSites,
   otherUtilSites,
   codeUtilSites,
-  designUtilSites
-} from './sites/utilSites'
+  designUtilSites,
+} from "./sites/utilSites";
 
 export const allSites = [
   // 技术社区
@@ -39,5 +39,5 @@ export const allSites = [
   aiUtilSites,
   otherUtilSites,
   codeUtilSites,
-  designUtilSites
-]
+  designUtilSites,
+];

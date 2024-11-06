@@ -1,33 +1,38 @@
-import { createContext, useReducer, Dispatch } from 'react'
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react'
+import { createContext, useReducer, Dispatch } from "react";
+import {
+  ReactElement,
+  JSXElementConstructor,
+  ReactFragment,
+  ReactPortal,
+} from "react";
 
 interface IStore {
-  sideBarShow: boolean
+  sideBarShow: boolean;
 }
 
 interface IAction {
-  type: string
-  payload?: any
+  type: string;
+  payload?: any;
 }
 
 type AppContextProps = {
-  state: IStore
+  state: IStore;
   dispatch: Dispatch<{
-    type: 'toggleSideBarShow'
-    payload?: any
-  }>
-}
+    type: "toggleSideBarShow";
+    payload?: any;
+  }>;
+};
 
-export const AppContext = createContext<AppContextProps>({} as AppContextProps)
+export const AppContext = createContext<AppContextProps>({} as AppContextProps);
 
-const initialState = { sideBarShow: false }
+const initialState = { sideBarShow: false };
 
 function reducer(state: IStore, action: IAction) {
   switch (action.type) {
-    case 'toggleSideBarShow':
-      return { ...state, sideBarShow: !state.sideBarShow }
+    case "toggleSideBarShow":
+      return { ...state, sideBarShow: !state.sideBarShow };
     default:
-      throw new Error()
+      throw new Error();
   }
 }
 
@@ -40,10 +45,14 @@ export const AppProvider = (props: {
     | ReactFragment
     | ReactPortal
     | null
-    | undefined
+    | undefined;
 }) => {
-  const [state, dispatch] = useReducer(reducer, initialState)
-  return <AppContext.Provider value={{ state, dispatch }}>{props.children}</AppContext.Provider>
-}
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <AppContext.Provider value={{ state, dispatch }}>
+      {props.children}
+    </AppContext.Provider>
+  );
+};
 
-export default AppProvider
+export default AppProvider;
