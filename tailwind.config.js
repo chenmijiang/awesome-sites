@@ -1,21 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class',
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}", // <-- Add this line
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
   theme: {
     extend: {
       gridTemplateColumns: {
-        list: 'repeat(auto-fill, minmax(300px, 1fr))'
+        list: "repeat(auto-fill, minmax(300px, 1fr))",
       },
       transitionProperty: {
-        width: 'width'
+        width: "width",
       },
       colors: {
-        'cus-unactivated': 'rgba(0, 0, 0, 0.5)',
-        'cus-normal': 'rgba(0, 0, 0, 0.7)',
-        'cus-activated': 'rgba(0, 0, 0, 0.9)'
-      }
-    }
+        "cus-unactivated": "rgba(0, 0, 0, 0.5)",
+        "cus-normal": "rgba(0, 0, 0, 0.7)",
+        "cus-activated": "rgba(0, 0, 0, 0.9)",
+      },
+    },
   },
-  plugins: []
-}
+  plugins: [require("@tailwindcss/typography")],
+};
