@@ -7,10 +7,11 @@ import {
   sprite_generator,
   iloveimg,
   tinypng,
+  squoosh,
 } from "@/configs/sites";
 
 export const picUtilsSites: ATagSites = {
   type: "工具-图片",
   icon: <Icon icon="ic:baseline-image" width={26} height={26} />,
-  sites: [icones, sprite_generator, ray_so, carbon, iloveimg, tinypng],
+  sites: [icones, sprite_generator, ray_so, carbon, iloveimg, tinypng, squoosh],
 };

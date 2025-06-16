@@ -850,3 +850,10 @@ export const tinypng: Site = {
   logo: "",
   desc: "免费在线图像压缩器，让网站运行速度更快！使用 TinyPNG 的智能有损压缩引擎，缩小 WEBP、JPEG 和 PNG 图像的文件大小。",
 };
+
+epot cont squoosh: Site = {
+  name: "Squoosh",
+  link: "https://squoosh.app/",
+  logo: "",
+  desc: "Squoosh 是一款终极图像优化器，可让您在浏览器中压缩和比较具有不同编解码器的图像。",
+}
